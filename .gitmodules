@@ -1,6 +1,3 @@
 [submodule "Metric_Learning_Adversarial_Robustness"]
 	path = Metric_Learning_Adversarial_Robustness
 	url = https://github.com/columbia/Metric_Learning_Adversarial_Robustness
-[submodule "Excessive-Invariance"]
-	path = Excessive-Invariance
-	url = https://github.com/ftramer/Excessive-Invariance.git
