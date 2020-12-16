@@ -1,6 +1,6 @@
-[submodule "Metric_Learning_Adversarial_Robustness"]
-	path = Metric_Learning_Adversarial_Robustness
-	url = git@github.com:eczy/Excessive-Invariance.git
 [submodule "Excessive-Invariance"]
 	path = Excessive-Invariance
+	url = git@github.com:eczy/Excessive-Invariance.git
+[submodule "Metric_Learning_Adversarial_Robustness"]
+	path = Metric_Learning_Adversarial_Robustness
 	url = git@github.com:eczy/Metric_Learning_Adversarial_Robustness.git
