@@ -1,0 +1,10 @@
+{
+  "root_dir": "./",
+  "model_name": "baseline-triplet",
+  "lr_rate": 0.0001,
+  "n_epochs": 10,
+  "batch_size": 256,
+  "margin": 0.5,
+  "patience": 5
+}
+
