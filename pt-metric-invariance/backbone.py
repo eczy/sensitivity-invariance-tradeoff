@@ -4,31 +4,39 @@ import torch.nn.functional as F
 
 from torchvision import models
 
-# TODO - make backbone SOTA. Res50 potentially too dense based on last paper
 
 class EmbeddingNet(nn.Module):
-    def __init__(self):
+    def __init__(self, embed_dim=4, num_classes=10):
         super(EmbeddingNet, self).__init__()
         self.convnet = nn.Sequential(nn.Conv2d(1, 32, 5), nn.PReLU(),
                                      nn.MaxPool2d(2, stride=2),
                                      nn.Conv2d(32, 64, 5), nn.PReLU(),
                                      nn.MaxPool2d(2, stride=2))
 
-        self.fc = nn.Sequential(nn.Linear(64 * 4 * 4, 256),
+        self.embedding = nn.Sequential(nn.Linear(64 * 4 * 4, 256),
                                 nn.PReLU(),
                                 nn.Linear(256, 256),
                                 nn.PReLU(),
-                                nn.Linear(256, 2)
+                                nn.Linear(256, embed_dim)
                                 )
+        
+        # TODO is this okay
+        # self.step1 = nn.Sequential(nn.Linear(embed_dim, num_classes)), 
+        self.fc = nn.Sequential(nn.Linear(embed_dim, num_classes), 
+                                nn.LogSoftmax(dim=1)) 
 
-    def forward(self, x):
-        output = self.convnet(x)
-        output = output.view(output.size()[0], -1)
-        output = self.fc(output)
-        return output
 
     def get_embedding(self, x):
-        return self.forward(x)
+        output = self.convnet(x)
+        output = output.view(output.size()[0], -1)
+        return self.embedding(output)        
+
+    def forward(self, x):
+        output = self.get_embedding(x)
+
+        # import pdb; pdb.set_trace();
+        output = self.fc(output)
+        return output
 
 class TripletNet(nn.Module):
     def __init__(self, embedding_net):
@@ -43,7 +51,9 @@ class TripletNet(nn.Module):
 
     def get_embedding(self, x):
         return self.embedding_net(x)
-        
+
+
+
 # class BasicCNN(nn.Module):
 #     def __init__(self, input_shape=(), output_size=4):
 #         super(BasicCNN, self).__init__()
