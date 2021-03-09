@@ -29,7 +29,7 @@ class InvarianceGenerator(object):
         self.y_train = y
     
     def best_neighbor(self, x, y, limits=[3, 3, 30], granularity=[5, 5, 31]):
-        key = hash((x.tobytes(), y.tobytes()))
+        key = hash((x.tobytes(), y))
         if key in self.nns_cache:
             return self.nns_cache[key]
         grid = list(product(*list(np.linspace(-l, l, num=g) for l, g in zip(limits, granularity))))
