@@ -6,6 +6,25 @@ import os
 from sklearn.manifold import TSNE
 
 
+def tsne_plot(model, device, viz_train_loader, viz_test_loader, mdir, iter_idx):
+    print("*****Plotting embeddings at iter: %s****" % iter_idx)
+    plot_dir = os.path.join(mdir, 'plots')
+
+    x_test, y_test = next(iter(viz_test_loader))
+    x_train, y_train = next(iter(viz_train_loader))
+    x_train = x_train.to(device)
+    x_test = x_test.to(device)
+    train_outputs = model.get_embedding(x_train)
+    test_outputs = model.get_embedding(x_test)
+
+    tsne = TSNE(random_state=0)
+    train_tsne_embeds = tsne.fit_transform(train_outputs.cpu().detach().numpy())
+    test_tsne_embeds = tsne.fit_transform(test_outputs.cpu().detach().numpy())
+
+    scatter(train_tsne_embeds, y_train.cpu().numpy(), root=plot_dir, subtitle=f'ITER: %s TRAIN online hard TNN distribution' % iter_idx)
+    scatter(test_tsne_embeds, y_test.cpu().numpy(), root=plot_dir, subtitle=f'ITER: %s TEST online hard TNN distribution' % iter_idx)
+
+
 def scatter(x, labels, root='plot', subtitle=None, dataset='MNIST'):
     mnist_classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728',

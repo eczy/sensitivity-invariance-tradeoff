@@ -229,36 +229,110 @@ def _pairwise_distances(embeddings, squared=False, device='cpu'):
     return distances
 
 
-def _pairwise_distances_angular(embeddings, squared=False, device='cpu'):
+def _pairwise_distances_angular(x1, x2=None, squared=False, device='cpu', eps=1e-8):
     """Compute the 2D matrix of distances between all the embeddings.
     Args:
-        embeddings: tensor of shape (batch_size, embed_dim)
+        x1: tensor of shape (batch_size, embed_dim)
+        x2: tensor of shape (batch_size, embed_dim)
         squared: Boolean. If true, output is the pairwise squared euclidean distance matrix.
                  If false, output is the pairwise euclidean distance matrix.
     Returns:
         pairwise_distances: tensor of shape (batch_size, batch_size)
     """
-    # Get the dot product between all embeddings
-    embeddings = torch.squeeze(embeddings,1)  # shape=(batch_size, features, 1)
-    dot_product = torch.matmul(embeddings, torch.transpose(embeddings,0,1)) # shape=(batch_size, batch_size)
-    
+
     # Compute the pairwise angular distance:
     # cosine dis = dot<a, b> / ||a||^2 * ||b||^2
-    # shape (batch_size, batch_size)
-    square_element = torch.diag(dot_product)
 
-    a_norm = torch.unsqueeze(square_element, 0) ** 0.5 #(batchsize x 1)
-    b_norm = torch.unsqueeze(square_element, 1) ** 0.5
-    distances = dot_product / (a_norm * b_norm) # (batchsize x batchsize)
+    # Get the dot product 
+    # print("dotting")
+    # import pdb; pdb.set_trace();
+    x1 = torch.squeeze(x1, 1)  # shape=(batch_size, features, 1)
+    x2 = x1 if x2 is None else x2 
+    x2 = torch.squeeze(x2, 1)  # shape=(batch_size, features, 1)
+    dot_product = torch.mm(x1, x2.t()) # shape=(batch_size, batch_size)
+    
+    # calculate norm
+    w1 = x1.norm(p=2, dim=1, keepdim=True)
+    w2 = w1 if x2 is x1 else x2.norm(p=2, dim=1, keepdim=True)
+    cos_sim = dot_product / (w1 * w2.t()).clamp(min=eps) # (batchsize x batchsize)
+    cos_dist = 1 - cos_sim
+    
+    return cos_dist
+
+def online_mine_angular_hard(labels, nat_embeddings, adv_embeddings, margin, squared, device, reg=True, angular=True): 
+    """with hard negative mining"""
+    pairwise_dist = _pairwise_distances_angular(nat_embeddings, adv_embeddings, squared=squared, device=device)
+
+    # For each anchor, get the hardest positive
+    # First, we need to get a mask for every valid positive (they should have same label)
+    mask_anchor_positive = _get_anchor_positive_triplet_mask(labels, device)
+
+    # We put to 0 any element where (a, p) is not valid (valid if a != p and label(a) == label(p))
+    anchor_positive_dist = mask_anchor_positive*pairwise_dist
+
+    # shape (batch_size, 1)
+    hardest_positive_dist = torch.max(anchor_positive_dist, 1, keepdim=True)[0]
+
+    # For each anchor, get the hardest negative
+    # First, we need to get a mask for every valid negative (they should have different labels)
+    mask_anchor_negative = _get_anchor_negative_triplet_mask(labels, device)
+
+
+    # We add the maximum value in each row to the invalid negatives (label(a) == label(n))
+    max_anchor_negative_dist = torch.max(pairwise_dist, 1, keepdim=True)[0]
+    anchor_negative_dist = pairwise_dist + max_anchor_negative_dist * ~(mask_anchor_negative)
+
+    # shape (batch_size,)
+    hardest_negative_dist = torch.min(anchor_negative_dist, 1, keepdim=True)[0]
+
+
+    # Combine biggest d(a, p) and smallest d(a, n) into final triplet loss
+    triplet_loss = torch.max(hardest_positive_dist - hardest_negative_dist + margin, torch.Tensor([0.0]).to(device))
+
+    
+    # experiment 1: global invariance attack --> 8 hours.. single thread
+    
+    # experiment 2: approximated invariance attack
+    # triplet_loss += linf_hardest_negative(hardest_negatives_idx, images)
+
+    # test sets
+    # natural test set 
+    # sensitivity test set --> sensitivity attack on natural
+    # invariance test set --> invariance attack on natural
+
+
+    # sanity check 
+    # train non robust model and test on sensitivity and //invariance
+    # Get final mean triplet loss
+    triplet_loss = torch.mean(triplet_loss)
+
+
+    if reg: 
+        # apply hardest negative mask using torch arg max on embedding
+        # apply hardest positive mask using torch arg whatever
+        # norm each vector
+        norm = 0.0
+        negative_idxs = torch.argmin(anchor_negative_dist, 1, keepdim=True).squeeze(1)
+        positive_idxs = torch.argmax(anchor_positive_dist, 1, keepdim=True).squeeze(1)
+        a_emb = adv_embeddings
+        n_emb = nat_embeddings[negative_idxs]
+        p_emb = nat_embeddings[positive_idxs]
+
+        # import pdb; pdb.set_trace();
+        norm += a_emb.norm(p=2, dim=1, keepdim=True)
+        norm += n_emb.norm(p=2, dim=1, keepdim=True)        
+        norm += p_emb.norm(p=2, dim=1, keepdim=True)
+
+        triplet_loss += 0.01 * torch.mean(norm)
 
     # import pdb; pdb.set_trace()
-    distances = (1 - distances)
-    
-    return distances    
+
+    return triplet_loss, torch.mean(hardest_positive_dist), torch.mean(hardest_negative_dist)
 
 
-def online_mine_angular(labels, embeddings, margin, squared, device, reg=True, angular=True): 
-    pairwise_dist = _pairwise_distances_angular(embeddings, squared=squared, device=device)
+
+def online_mine_angular(labels, nat_embeddings, adv_embeddings, margin, squared, device, reg=True, angular=True): 
+    pairwise_dist = _pairwise_distances_angular(nat_embeddings, adv_embeddings, squared=squared, device=device)
 
     # get data masks
     mask_anchor_positive = _get_anchor_positive_triplet_mask(labels, device)
