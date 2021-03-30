@@ -259,7 +259,7 @@ def _pairwise_distances_angular(x1, x2=None, squared=False, device='cpu', eps=1e
     
     return cos_dist
 
-def online_mine_angular_hard(labels, nat_embeddings, adv_embeddings, margin, squared, device, reg=True, angular=True): 
+def online_mine_angular_hard(labels, nat_embeddings, adv_embeddings, margin, squared, device, reg=True): 
     """with hard negative mining"""
     pairwise_dist = _pairwise_distances_angular(nat_embeddings, adv_embeddings, squared=squared, device=device)
 

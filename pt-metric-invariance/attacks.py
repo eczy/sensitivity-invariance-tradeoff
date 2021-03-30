@@ -38,7 +38,7 @@ import sampler
 
 
 
-def fgsm_attack(model, images, labels, device, margin, eps):  
+def fgsm_attack(model, images, labels, device, eps):  
     # images = images.to(device)
     # labels = labels.to(device)  
     
