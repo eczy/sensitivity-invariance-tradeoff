@@ -18,14 +18,18 @@ def main():
 
     for split, ds in zip(['train', 'test'], [mnist_train, mnist_test]):
         print(f"Generating attacks for {split}")
-        attacks = []
         inv_generator = InvarianceGenerator()
         inv_generator.fit(ds.data.numpy(), np.array([y for x, y in ds]))
 
-        for x, y in tqdm(ds):
-            attacks.append(torch.Tensor(inv_generator.invariance_attack(np.array(x), y)))
-        attacks_tensor = torch.stack(attacks)
-        torch.save(attacks_tensor, os.path.join(args.mnist_dir, f"inv_attacks_{split}.pt"))
+        for i, (x, y) in enumerate(tqdm(ds)):
+            if os.path.exists(os.path.join(args.mnist_dir, f"inv_attacks_{split}_{i}.pt")):
+                continue
+            attack = torch.Tensor(inv_generator.invariance_attack(np.array(x), y))
+            torch.save(attack, os.path.join(args.mnist_dir, f"inv_attacks_{split}_{i}.pt"))
+            del attack
+
+        # attacks_tensor = torch.stack(attacks)
+        # torch.save(attacks_tensor, os.path.join(args.mnist_dir, f"inv_attacks_{split}.pt"))
 
 
 if __name__ == "__main__":
