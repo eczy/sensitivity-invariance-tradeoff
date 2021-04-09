@@ -7,18 +7,18 @@ from types import Optional, Callable, Tuple, Any
 class AdversarialMNIST(MNIST):
     def __init__(self,
         root: str,
+        adv_root: str,
         train: bool = True,
         transform: Optional[Callable] = None,
         target_transform: Optional[Callable] = None,
         download: bool = False,
-        adv_root: str,
     ) -> None:
         super(AdversarialMNIST, self).__init__(root, train, transform, target_transform, download)
         self.adv_root = adv_root
 
     def __getitem__(self, index: int) -> Tuple[Any, Any, Any]:
         img, target = super(AdversarialMNIST, self).__getitem__(index)
-        adv_path = os.path.join(self.adv_root, f"inv_attacks_{split}_{index}.pt")
+        adv_path = os.path.join(self.adv_root, f"inv_attacks_{'train' if self.train else 'test'}_{index}.pt")
         if os.path.exists(adv_path):
             adv_img = torch.load(os.path.join(self.adv_root, f"inv_attacks_{split}_{index}.pt"))
         else:
