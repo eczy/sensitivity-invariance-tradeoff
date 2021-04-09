@@ -2,6 +2,7 @@ from torch.utils.data import Dataset, DataLoader, MNIST
 from torchvision import transforms, utils
 import os
 from .invariance_generator import InvarianceGenerator
+from types import Optional, Callable, Tuple, Any
 
 class AdversarialMNIST(MNIST):
     def __init__(self,
@@ -15,7 +16,7 @@ class AdversarialMNIST(MNIST):
         super(AdversarialMNIST, self).__init__(root, train, transform, target_transform, download)
         self.adv_root = adv_root
 
-    def __getitem__(self, index: int) -> Tuple[Any, Any]:
+    def __getitem__(self, index: int) -> Tuple[Any, Any, Any]:
         img, target = super(AdversarialMNIST, self).__getitem__(index)
         adv_path = os.path.join(self.adv_root, f"inv_attacks_{split}_{index}.pt")
         if os.path.exists(adv_path):

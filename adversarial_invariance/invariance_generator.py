@@ -54,7 +54,7 @@ class InvarianceGenerator(object):
                 # store the inverse rotation+translation to be applied to the target
                 # grids_nn.append(-np.asarray(grid[best]))
         # return nns, y_nns, grids_nn
-        self.nns_cache[key] = (nns, y_nns)
+        # self.nns_cache[key] = (nns, y_nns)
         return nns, y_nns
 
 
