@@ -18,7 +18,8 @@ class AdversarialMNIST(MNIST):
 
     def __getitem__(self, index: int) -> Tuple[Any, Any, Any]:
         img, target = super(AdversarialMNIST, self).__getitem__(index)
-        adv_path = os.path.join(self.adv_root, f"inv_attacks_{'train' if self.train else 'test'}_{index}.pt")
+        split = "train" if self.train else "test"
+        adv_path = os.path.join(self.adv_root, f"inv_attacks_{split}_{index}.pt")
         if os.path.exists(adv_path):
             adv_img = torch.load(os.path.join(self.adv_root, f"inv_attacks_{split}_{index}.pt"))
         else:
