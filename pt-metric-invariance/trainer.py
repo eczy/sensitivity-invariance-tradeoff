@@ -11,6 +11,7 @@ import modeling
 from torchvision.datasets import MNIST
 from torchvision import transforms
 from torch.utils.data import DataLoader, TensorDataset
+from adversarial_invariance import adversarial_dataset as ad
 
 import sampler
 import backbone
@@ -22,20 +23,14 @@ def train(model, train_loader, config):
     running_train_loss = 0.0
     print_every = config.getint('model', 'print_every')
 
+
     for idx, data in enumerate(train_loader):
-        inputs, labels  = data
+        inputs, labels, adv_inputs = data
         inputs = inputs.to(device)
         labels = labels.to(device)
+        adv_inputs = adv_inputs.to(device)
         
-        loss, pos_mask, neg_mask = modeling.construct_loss(config, model, inputs, labels, device)
-        # nat_embeddings = model.get_embedding(inputs)
-        # adv_images = attacks.fgsm_attack(model=model, images=inputs, labels=labels, device=device, eps=config.getfloat('sensitivity', 'epsilon'))
-        # adv_embeddings = model.get_embedding(adv_images)
-        # outputs = model(adv_images)
-
-        # metric_loss, pos_mask, neg_mask = sampler.online_mine_angular_hard(labels, nat_embeddings, adv_embeddings, margin=margin, squared=True, reg=True,device=device)
-        # xe_loss = nll_loss(outputs, labels)
-        # loss = xe_loss + (0.5*metric_loss)  
+        loss, pos_mask, neg_mask = modeling.construct_loss(config, model, inputs, adv_inputs, labels, device)
         loss.backward()
 
         optimizer.step()
@@ -47,31 +42,31 @@ def train(model, train_loader, config):
 
     return model, train_epoch_loss
 
-def test(model, test_loader, config):
+def test(model, test_loader, config, arr_test_configs):
     running_test_loss = 0.0
+
     print_every = config.getint('model', 'print_every')
 
-    for idx, data in enumerate(test_loader):
-        inputs, labels  = data
-        inputs = inputs.to(device)
-        labels = labels.to(device)
+    best_epoch_loss = np.inf
 
-        loss, pos_mask, neg_mask = modeling.construct_loss(config, model, inputs, labels, device)
+    for test_config, config_name in zip(arr_test_configs, ['original', 'sensitivity', 'invariance']): # go through diff outputs
+        print(f"***********{config_name} test set **********")
 
-        # nat_embeddings = model.get_embedding(inputs)
-        # adv_images = attacks.fgsm_attack(model=model, images=inputs, labels=labels, device=device, eps=config.getfloat('sensitivity', 'epsilon'))
-        # adv_embeddings = model.get_embedding(adv_images)
-        # outputs = model(adv_images)
+        for idx, data in enumerate(test_loader):
+            inputs, labels, adv_inputs = data
+            inputs = inputs.to(device)
+            labels = labels.to(device)
+            adv_inputs = adv_inputs.to(device)
 
-        # # import pdb; pdb.set_trace();
-        # metric_loss, pos_mask, neg_mask = sampler.online_mine_angular_hard(labels, nat_embeddings, adv_embeddings, margin=margin, squared=True, reg=True,device=device)
-        # xe_loss = nll_loss(outputs, labels)
-        # loss = xe_loss + (0.5*metric_loss)   
-        running_test_loss += loss.item()    
-        if idx%print_every == 0:
-            print(f"Testing @ epoch = {epoch}, {idx}/{len(test_loader)}, loss = {loss:.5f}, pos_mask = {pos_mask}, neg_mask = {neg_mask}", end='\r')  
-            print()
-    test_epoch_loss = running_test_loss / len(test_loader)
+            loss, pos_mask, neg_mask = modeling.construct_loss(test_config, model, inputs, adv_inputs, labels, device)
+
+            running_test_loss += loss.item()    
+            if idx%print_every == 0:
+                print(f"Testing @ epoch = {epoch}, {idx}/{len(test_loader)}, loss = {loss:.5f}, pos_mask = {pos_mask}, neg_mask = {neg_mask}", end='\r')  
+                print()
+        test_epoch_loss = running_test_loss / len(test_loader)
+
+        
     return model, test_epoch_loss
 
 
@@ -79,14 +74,14 @@ if __name__ == "__main__":
 
     #1. parse input parameters
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str, help="config for model", default="./config_mnist.ini")
+    parser.add_argument('--config', type=str, help="config for model", default="./config_train_mnist_sens.ini")
     parser.add_argument('--device', type=str, help="cuda device no.", default=0)
     parser.add_argument('--reset', '-r', action='store_true', help="whether or not to reset model dir.")
     input_args = parser.parse_args()
 
     #2. setup configs
     config = configparser.ConfigParser()
-    config.read(input_args.config)
+    config.read(input_args.config) 
 
     root_dir = config.get('model', 'root_dir')
     model_name = config.get('model', 'model_name')
@@ -107,29 +102,60 @@ if __name__ == "__main__":
         os.mkdir(model_dir)
 
     shutil.copyfile(input_args.config, os.path.join(model_dir, 'config.ini'))
+
     
+    # for test set
+    normal_config = configparser.ConfigParser()
+    normal_config.read('./config_test_mnist_normal.ini')
+
+    sensitivity_config = configparser.ConfigParser()
+    sensitivity_config.read('./config_test_mnist_sensitivity.ini')
+
+    invariance_config = configparser.ConfigParser()
+    invariance_config.read('./config_test_mnist_invariance.ini')
+    arr_test_configs = [normal_config, sensitivity_config, invariance_config]
 
     #3. prepare the dataset
     mean, std = 0.1307, 0.3081
-    train_dataset = MNIST(root='../data/MNIST',
-                        train=True, 
-                        download=True,
-                        transform=transforms.Compose([
-                                    transforms.ToTensor(),
-                                    transforms.Normalize((mean,), (std,))]))
-    test_dataset = MNIST(root='../data/MNIST', 
-                        train=False, 
-                        download=True,
-                        transform=transforms.Compose([
-                                transforms.ToTensor(),
-                                transforms.Normalize((mean,), (std,))]))
+    # train_dataset = MNIST(root='../data/MNIST',
+    #                     train=True, 
+    #                     download=True,
+    #                     transform=transforms.Compose([
+    #                                 transforms.ToTensor(),
+    #                                 transforms.Normalize((mean,), (std,))]))
+    # test_dataset = MNIST(root='../data/MNIST', 
+    #                     train=False, 
+    #                     download=True,
+    #                     transform=transforms.Compose([
+    #                             transforms.ToTensor(),
+    #                             transforms.Normalize((mean,), (std,))]))
     n_classes = 10
 
     #4.sampler 
     # online
-    train_loader = DataLoader(train_dataset, batch_size=batch_size)
-    test_loader = DataLoader(test_dataset, batch_size=batch_size)
+    
+    invar_root = '/data/evan/mnist/mnist'
+    normal_root = '../data/MNIST'
+    train_dataset = ad.AdversarialMNIST(root=normal_root,
+                                        adv_root=invar_root,
+                                        train=True, 
+                                        download=True,
+                                        transform=transforms.Compose([
+                                                    transforms.ToTensor(),
+                                                    transforms.Normalize((mean,), (std,))]))
 
+    test_dataset = ad.AdversarialMNIST(root=normal_root,
+                                        adv_root=invar_root,
+                                        train=False, 
+                                        download=True,
+                                        transform=transforms.Compose([
+                                                    transforms.ToTensor(),
+                                                    transforms.Normalize((mean,), (std,))]))
+    n_classes = 10
+
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
+    
     # data loader for visualization
     viz_train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=False)
     viz_test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
@@ -144,7 +170,6 @@ if __name__ == "__main__":
     #6. TSNE of data before training
     utils.tsne_plot(model, device, viz_train_loader, viz_test_loader, mdir=model_dir, iter_idx=0)
 
-
     #7. train
     last_epoch_improved = 0
     epoch = 0
@@ -152,7 +177,7 @@ if __name__ == "__main__":
     while epoch - last_epoch_improved < patience:
         
         model, train_epoch_loss = train(model, train_loader, config)
-        model, test_epoch_loss = test(model, test_loader, config)
+        model, test_epoch_loss = test(model, test_loader, config, arr_test_configs)
 
         # save model/ embedding info
         if test_epoch_loss < best_loss:

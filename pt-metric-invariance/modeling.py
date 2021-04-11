@@ -8,8 +8,9 @@ import sampler
 import attacks
 
 
-def construct_loss(config, model, inputs, labels, device): 
+def construct_loss(config, model, inputs, adv_inputs, labels, device): 
     loss = 0.0
+    adv_inputs = adv_inputs.unsqueeze(1) #torch.Size([256, 1, 28, 28])
 
     nat_embeddings = model.get_embedding(inputs)
     adv_embeddings = None
@@ -25,10 +26,8 @@ def construct_loss(config, model, inputs, labels, device):
     if config.getboolean('invariance', 'use') is True: 
         if config.get('invariance', 'mode') == "linf":
             eps = config.getfloat('invariance', 'epsilon')
-            raise NotImplementedError
-            # TODO add invariance attacks here
-            # sens_image = attacks.fgsm_attack(model=model, images=inputs, labels=labels, device=device, eps=eps)
-            # sens_embeddings = model.get_embedding(sens_image)
+            # import pdb; pdb.set_trace();
+            invar_embeddings = model.get_embedding(adv_inputs)
 
     if config.getboolean('x_ent', 'use') is True: 
         nll_loss = torch.nn.NLLLoss()
@@ -37,7 +36,7 @@ def construct_loss(config, model, inputs, labels, device):
             inputs = sens_image
 
         elif config.get('x_ent', 'perturbation') == "invariance":
-            raise NotImplementedError
+            inputs = adv_inputs
 
         outputs = model(inputs)
         xe_loss = nll_loss(outputs, labels)
@@ -59,7 +58,7 @@ def construct_loss(config, model, inputs, labels, device):
         
         elif config.get('triplet', 'perturbation') == "invariance":
             # print("Using triplet invariance...")
-            raise NotImplementedError
+            adv_embeddings = invar_embeddings
 
         if distance == "hard angular": 
             metric_loss, pos_mask, neg_mask = sampler.online_mine_angular_hard(labels, nat_embeddings, adv_embeddings, margin=margin, reg=reg_embeddings, device=device, squared=True)

@@ -1,7 +1,7 @@
 import argparse
 from torch.utils.data import Dataset
 from torchvision.datasets import MNIST
-from adversarial_invariance.invariance_generator import InvarianceGenerator
+from invariance_generator import InvarianceGenerator
 import os
 import shutil
 import numpy as np
@@ -16,7 +16,7 @@ def main():
     mnist_train = MNIST(args.mnist_dir, train=True, download=True)
     mnist_test = MNIST(args.mnist_dir, train=False, download=True)
 
-    for split, ds in zip(['train', 'test'], [mnist_train, mnist_test]):
+    for split, ds in zip(['train', 'test'], [mnist_test, mnist_train]):
         print(f"Generating attacks for {split}")
         inv_generator = InvarianceGenerator()
         inv_generator.fit(ds.data.numpy(), np.array([y for x, y in ds]))

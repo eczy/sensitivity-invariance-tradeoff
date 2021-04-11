@@ -10,8 +10,8 @@ def tsne_plot(model, device, viz_train_loader, viz_test_loader, mdir, iter_idx):
     print("*****Plotting embeddings at iter: %s****" % iter_idx)
     plot_dir = os.path.join(mdir, 'plots')
 
-    x_test, y_test = next(iter(viz_test_loader))
-    x_train, y_train = next(iter(viz_train_loader))
+    x_test, y_test, _ = next(iter(viz_test_loader))
+    x_train, y_train, _ = next(iter(viz_train_loader))
     x_train = x_train.to(device)
     x_test = x_test.to(device)
     train_outputs = model.get_embedding(x_train)
