@@ -199,10 +199,15 @@ if __name__ == "__main__":
 
         epoch +=1
         epoch_time = (time.time() - start_time) / 60
-        writer.add_scalar('train epoch loss', train_epoch_loss, epoch)     
-        writer.add_scalar('test orig epoch loss', orig_loss, epoch)     
-        writer.add_scalar('test sensitivity epoch loss', sensitivity_loss, epoch)     
-        writer.add_scalar('test invariance epoch  loss', invariance_loss, epoch)             
+        writer.add_scalar('loss_overall/train epoch loss', train_epoch_loss, epoch)  
+        writer.add_scalars(f'loss_overall', {
+            'test orig epoch loss': orig_loss,
+            'test sensitivity epoch loss': sensitivity_loss,
+            'test invariance epoch  loss':invariance_loss}, epoch)   
+
+        writer.add_scalar('loss_test/orig epoch loss', orig_loss, epoch)     
+        writer.add_scalar('loss_test/sensitivity epoch loss', sensitivity_loss, epoch)     
+        writer.add_scalar('loss_test/invariance epoch  loss', invariance_loss, epoch)             
 
         print(f"\nPatience= {patience}, Time={epoch_time:.5f}, train_epoch_loss = {train_epoch_loss}, test_epoch_loss = {invariance_loss}")
         print(" "*100)
