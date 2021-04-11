@@ -12,6 +12,8 @@ from torchvision.datasets import MNIST
 from torchvision import transforms
 from torch.utils.data import DataLoader, TensorDataset
 from adversarial_invariance import adversarial_dataset as ad
+from torch.utils.tensorboard import SummaryWriter
+
 
 import sampler
 import backbone
@@ -47,7 +49,7 @@ def test(model, test_loader, config, arr_test_configs):
 
     print_every = config.getint('model', 'print_every')
 
-    best_epoch_loss = np.inf
+    test_losses = []
 
     for test_config, config_name in zip(arr_test_configs, ['original', 'sensitivity', 'invariance']): # go through diff outputs
         print(f"***********{config_name} test set **********")
@@ -66,8 +68,10 @@ def test(model, test_loader, config, arr_test_configs):
                 print()
         test_epoch_loss = running_test_loss / len(test_loader)
 
+        test_losses.append(test_epoch_loss)
+
         
-    return model, test_epoch_loss
+    return model, test_losses
 
 
 if __name__ == "__main__": 
@@ -95,7 +99,7 @@ if __name__ == "__main__":
 
     start_time = time.time()
     start_time_dir = f'{model_name}{start_time:0.0f}'
-    model_dir = os.path.join(root_dir, start_time_dir)
+    model_dir = os.path.join(root_dir, 'model_runs', start_time_dir)
     if input_args.reset and os.path.exists(model_dir): 
         shutil.rmtree(model_dir)
     if not os.path.exists(model_dir): 
@@ -171,26 +175,38 @@ if __name__ == "__main__":
     utils.tsne_plot(model, device, viz_train_loader, viz_test_loader, mdir=model_dir, iter_idx=0)
 
     #7. train
+    writer = SummaryWriter(f'runs/{start_time_dir}')
+
     last_epoch_improved = 0
     epoch = 0
     best_loss = np.inf
     while epoch - last_epoch_improved < patience:
         
         model, train_epoch_loss = train(model, train_loader, config)
-        model, test_epoch_loss = test(model, test_loader, config, arr_test_configs)
+        model, arr_test_losses = test(model, test_loader, config, arr_test_configs)
+
+        orig_loss = arr_test_losses[0]
+        sensitivity_loss = arr_test_losses[1]
+        invariance_loss = arr_test_losses[2]
 
         # save model/ embedding info
-        if test_epoch_loss < best_loss:
+        if invariance_loss < best_loss:
             torch.save(model, os.path.join(model_dir, 'model'))
-            best_loss = test_epoch_loss
+            best_loss = invariance_loss
             last_epoch_improved = epoch
         else:
             patience-=1
 
         epoch +=1
         epoch_time = (time.time() - start_time) / 60
-        print(f"\nPatience= {patience}, Time={epoch_time:.5f}, train_epoch_loss = {train_epoch_loss}, test_epoch_loss = {test_epoch_loss}")
+        writer.add_scalar('train epoch loss', train_epoch_loss, epoch)     
+        writer.add_scalar('test orig epoch loss', orig_loss, epoch)     
+        writer.add_scalar('test sensitivity epoch loss', sensitivity_loss, epoch)     
+        writer.add_scalar('test invariance epoch  loss', invariance_loss, epoch)             
+
+        print(f"\nPatience= {patience}, Time={epoch_time:.5f}, train_epoch_loss = {train_epoch_loss}, test_epoch_loss = {invariance_loss}")
         print(" "*100)
+
 
     utils.tsne_plot(model, device, viz_train_loader, viz_test_loader, mdir=model_dir, iter_idx=100)
     total_time = (time.time() - start_time) / 60
