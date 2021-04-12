@@ -170,7 +170,8 @@ if __name__ == "__main__":
     last_epoch_improved = 0
     epoch = 0
     best_loss = np.inf
-    while epoch - last_epoch_improved < patience:
+    
+    while epoch < n_epochs:
         
         model, train_epoch_loss = train(model, train_loader, config)
         model, arr_test_losses = test(model, test_loader, config, arr_test_configs)
