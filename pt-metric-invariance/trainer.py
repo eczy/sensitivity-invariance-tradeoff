@@ -78,10 +78,12 @@ if __name__ == "__main__":
 
     #1. parse input parameters
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str, help="config for model", default="./config_train_mnist_sens.ini")
+    parser.add_argument('--config', type=str, help="config for model", default="./config_train_mnist_only_sens.ini")
     parser.add_argument('--device', type=str, help="cuda device no.", default=0)
     parser.add_argument('--reset', '-r', action='store_true', help="whether or not to reset model dir.")
     input_args = parser.parse_args()
+
+    print(f"args: {input_args}")
 
     #2. setup configs
     config = configparser.ConfigParser()
@@ -121,18 +123,6 @@ if __name__ == "__main__":
 
     #3. prepare the dataset
     mean, std = 0.1307, 0.3081
-    # train_dataset = MNIST(root='../data/MNIST',
-    #                     train=True, 
-    #                     download=True,
-    #                     transform=transforms.Compose([
-    #                                 transforms.ToTensor(),
-    #                                 transforms.Normalize((mean,), (std,))]))
-    # test_dataset = MNIST(root='../data/MNIST', 
-    #                     train=False, 
-    #                     download=True,
-    #                     transform=transforms.Compose([
-    #                             transforms.ToTensor(),
-    #                             transforms.Normalize((mean,), (std,))]))
     n_classes = 10
 
     #4.sampler 
@@ -175,7 +165,7 @@ if __name__ == "__main__":
     utils.tsne_plot(model, device, viz_train_loader, viz_test_loader, mdir=model_dir, iter_idx=0)
 
     #7. train
-    writer = SummaryWriter(f'runs/{start_time_dir}')
+    writer = SummaryWriter(f'model_runs/{start_time_dir}')
 
     last_epoch_improved = 0
     epoch = 0

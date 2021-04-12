@@ -47,9 +47,10 @@ def construct_loss(config, model, inputs, adv_inputs, labels, device):
 
         loss += xe_loss
 
+
+    # first triplet loss
     if config.getboolean('triplet', 'use') is True: 
         margin = config.getfloat('triplet', 'margin') 
-        reg_embeddings = config.getboolean('triplet', 'reg_embeddings') 
         distance = config.get('triplet', 'distance') 
 
         if config.get('triplet', 'perturbation') == "sensitivity":
@@ -61,16 +62,16 @@ def construct_loss(config, model, inputs, adv_inputs, labels, device):
             adv_embeddings = invar_embeddings
 
         if distance == "hard angular": 
-            metric_loss, pos_mask, neg_mask = sampler.online_mine_angular_hard(labels, nat_embeddings, adv_embeddings, margin=margin, reg=reg_embeddings, device=device, squared=True)
+            metric_loss, norms, pos_mask, neg_mask = sampler.online_mine_angular_hard(labels, nat_embeddings, adv_embeddings, margin=margin, device=device, squared=True)
         
         elif distance == "angular": 
-            metric_loss, pos_mask, neg_mask = sampler.online_mine_angular(labels, nat_embeddings, adv_embeddings, margin=margin, reg=reg_embeddings, device=device, squared=True)
+            metric_loss, norms, pos_mask, neg_mask = sampler.online_mine_angular(labels, nat_embeddings, adv_embeddings, margin=margin, device=device, squared=True)
 
         elif distance == "hard": 
-            metric_loss, pos_mask, neg_mask = sampler.online_mine_hard(labels, nat_embeddings, adv_embeddings, angular=False, device=device, squared=True)
+            metric_loss, norms, pos_mask, neg_mask = sampler.online_mine_hard(labels, nat_embeddings, adv_embeddings, angular=False, device=device, squared=True)
 
         elif distance == "all": 
-            metric_loss, pos_mask, neg_mask = sampler.online_mine_all(labels, nat_embeddings, adv_embeddings, angular=False, device=device, squared=True)
+            metric_loss, norms, pos_mask, neg_mask = sampler.online_mine_all(labels, nat_embeddings, adv_embeddings, angular=False, device=device, squared=True)
 
         else: 
             raise NotImplementedError
@@ -80,5 +81,64 @@ def construct_loss(config, model, inputs, adv_inputs, labels, device):
             metric_loss *= lambda_triplet 
 
         loss += metric_loss
+
+        if config.getboolean('triplet', 'reg_embeddings') is True: 
+            norm = 0.0
+            a_norm, n_norm, p_norm = norms
+            norm += a_norm
+            norm += n_norm
+            norm += p_norm
+            
+            lambda_reg = config.getfloat('triplet', 'reg_embed_lambda')
+            loss += lambda_reg * torch.mean(norm)
+
+    # import pdb; pdb.set_trace()
+    # second triplet loss
+    if config.getboolean('triplet_additional', 'use') is True: 
+        margin = config.getfloat('triplet_additional', 'margin') 
+        distance = config.get('triplet_additional', 'distance') 
+
+        if config.get('triplet_additional', 'perturbation') == "sensitivity":
+            # print("Using triplet sens...")
+            adv_embeddings = sens_embeddings
+        
+        elif config.get('triplet_additional', 'perturbation') == "invariance":
+            # print("Using triplet invariance...")
+            adv_embeddings = invar_embeddings
+
+        if distance == "hard angular": 
+            metric_loss, norms, pos_mask, neg_mask = sampler.online_mine_angular_hard(labels, nat_embeddings, adv_embeddings, margin=margin, device=device, squared=True)
+        
+        elif distance == "angular": 
+            metric_loss, norms, pos_mask, neg_mask = sampler.online_mine_angular(labels, nat_embeddings, adv_embeddings, margin=margin, device=device, squared=True)
+
+        elif distance == "hard": 
+            metric_loss, norms, pos_mask, neg_mask = sampler.online_mine_hard(labels, nat_embeddings, adv_embeddings, angular=False, device=device, squared=True)
+
+        elif distance == "all": 
+            metric_loss, norms, pos_mask, neg_mask = sampler.online_mine_all(labels, nat_embeddings, adv_embeddings, angular=False, device=device, squared=True)
+
+        else: 
+            raise NotImplementedError
+        
+        if config.getboolean('triplet_additional', 'as_reg') is True:
+            lambda_triplet = config.getfloat('triplet', 'lambda')
+            metric_loss *= lambda_triplet 
+
+        loss += metric_loss
+
+        if config.getboolean('triplet_additional', 'reg_embeddings') is True: 
+            norm = 0.0
+            a_norm, n_norm, p_norm = norms
+
+            if config.getboolean('triplet_additional', 'reg_only_adv') is True: #TODO prbly a sexier way to do this
+                norm += a_norm
+            else: 
+                norm += a_norm
+                norm += n_norm
+                norm += p_norm
+
+            lambda_reg = config.getfloat('triplet_additional', 'reg_embed_lambda')
+            loss += lambda_reg * torch.mean(norm)
 
     return loss, pos_mask, neg_mask

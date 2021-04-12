@@ -153,7 +153,18 @@ def online_mine_all(labels, embeddings, margin, angular, squared=False, device='
     # Get final mean triplet loss over the positive valid triplets
     triplet_loss = torch.sum(triplet_loss) / (num_positive_triplets + 1e-16)
 
-    return triplet_loss, torch.mean(anchor_positive_dist), torch.mean(anchor_negative_dist)
+    negative_idxs = torch.argmin(anchor_negative_dist, 1, keepdim=True).squeeze(1)
+    positive_idxs = torch.argmax(anchor_positive_dist, 1, keepdim=True).squeeze(1)
+    a_emb = adv_embeddings
+    n_emb = nat_embeddings[negative_idxs]
+    p_emb = nat_embeddings[positive_idxs]
+
+    a_norm = a_emb.norm(p=2, dim=1, keepdim=True) 
+    n_norm = n_emb.norm(p=2, dim=1, keepdim=True)         
+    p_norm = p_emb.norm(p=2, dim=1, keepdim=True)
+    norms = (a_norm, n_norm, p_norm)
+
+    return triplet_loss, norms, torch.mean(anchor_positive_dist), torch.mean(anchor_negative_dist)
     #return triplet_loss, num_positive_triplets, num_valid_triplets
 
 def _get_anchor_positive_triplet_mask(labels, device):
@@ -259,8 +270,9 @@ def _pairwise_distances_angular(x1, x2=None, squared=False, device='cpu', eps=1e
     
     return cos_dist
 
-def online_mine_angular_hard(labels, nat_embeddings, adv_embeddings, margin, squared, device, reg=True): 
+def online_mine_angular_hard(labels, nat_embeddings, adv_embeddings, margin, squared, device): 
     """with hard negative mining"""
+
     pairwise_dist = _pairwise_distances_angular(nat_embeddings, adv_embeddings, squared=squared, device=device)
 
     # For each anchor, get the hardest positive
@@ -306,32 +318,27 @@ def online_mine_angular_hard(labels, nat_embeddings, adv_embeddings, margin, squ
     # Get final mean triplet loss
     triplet_loss = torch.mean(triplet_loss)
 
+    
+    # apply hardest negative mask using torch arg max on embedding
+    # apply hardest positive mask using torch arg whatever
+    # norm each vector
+    negative_idxs = torch.argmin(anchor_negative_dist, 1, keepdim=True).squeeze(1)
+    positive_idxs = torch.argmax(anchor_positive_dist, 1, keepdim=True).squeeze(1)
+    a_emb = adv_embeddings
+    n_emb = nat_embeddings[negative_idxs]
+    p_emb = nat_embeddings[positive_idxs]
 
-    if reg: 
-        # apply hardest negative mask using torch arg max on embedding
-        # apply hardest positive mask using torch arg whatever
-        # norm each vector
-        norm = 0.0
-        negative_idxs = torch.argmin(anchor_negative_dist, 1, keepdim=True).squeeze(1)
-        positive_idxs = torch.argmax(anchor_positive_dist, 1, keepdim=True).squeeze(1)
-        a_emb = adv_embeddings
-        n_emb = nat_embeddings[negative_idxs]
-        p_emb = nat_embeddings[positive_idxs]
+    a_norm = a_emb.norm(p=2, dim=1, keepdim=True) 
+    n_norm = n_emb.norm(p=2, dim=1, keepdim=True)         
+    p_norm = p_emb.norm(p=2, dim=1, keepdim=True)
+    norms = (a_norm, n_norm, p_norm)
 
-        # import pdb; pdb.set_trace();
-        norm += a_emb.norm(p=2, dim=1, keepdim=True)
-        norm += n_emb.norm(p=2, dim=1, keepdim=True)        
-        norm += p_emb.norm(p=2, dim=1, keepdim=True)
 
-        triplet_loss += 0.01 * torch.mean(norm)
-
-    # import pdb; pdb.set_trace()
-
-    return triplet_loss, torch.mean(hardest_positive_dist), torch.mean(hardest_negative_dist)
+    return triplet_loss, norms, torch.mean(hardest_positive_dist), torch.mean(hardest_negative_dist)
 
 
 
-def online_mine_angular(labels, nat_embeddings, adv_embeddings, margin, squared, device, reg=True, angular=True): 
+def online_mine_angular(labels, nat_embeddings, adv_embeddings, margin, squared, device): 
     pairwise_dist = _pairwise_distances_angular(nat_embeddings, adv_embeddings, squared=squared, device=device)
 
     # get data masks
@@ -348,7 +355,18 @@ def online_mine_angular(labels, nat_embeddings, adv_embeddings, margin, squared,
     # Get final mean triplet loss
     triplet_loss = torch.mean(triplet_loss)
 
-    return triplet_loss, torch.mean(positive_dist), torch.mean(negative_dist)
+    negative_idxs = torch.argmin(anchor_negative_dist, 1, keepdim=True).squeeze(1)
+    positive_idxs = torch.argmax(anchor_positive_dist, 1, keepdim=True).squeeze(1)
+    a_emb = adv_embeddings
+    n_emb = nat_embeddings[negative_idxs]
+    p_emb = nat_embeddings[positive_idxs]
+
+    a_norm = a_emb.norm(p=2, dim=1, keepdim=True) 
+    n_norm = n_emb.norm(p=2, dim=1, keepdim=True)         
+    p_norm = p_emb.norm(p=2, dim=1, keepdim=True)
+    norms = (a_norm, n_norm, p_norm)
+
+    return triplet_loss, norms, torch.mean(positive_dist), torch.mean(negative_dist)
 
 
 def online_mine_hard(labels, embeddings, margin, angular, squared=False, device='cpu'):
@@ -399,6 +417,15 @@ def online_mine_hard(labels, embeddings, margin, angular, squared=False, device=
     # Get final mean triplet loss
     triplet_loss = torch.mean(triplet_loss)
 
-    # import pdb; pdb.set_trace()
+    negative_idxs = torch.argmin(anchor_negative_dist, 1, keepdim=True).squeeze(1)
+    positive_idxs = torch.argmax(anchor_positive_dist, 1, keepdim=True).squeeze(1)
+    a_emb = adv_embeddings
+    n_emb = nat_embeddings[negative_idxs]
+    p_emb = nat_embeddings[positive_idxs]
 
-    return triplet_loss, torch.mean(hardest_positive_dist), torch.mean(hardest_negative_dist)
+    a_norm = a_emb.norm(p=2, dim=1, keepdim=True) 
+    n_norm = n_emb.norm(p=2, dim=1, keepdim=True)         
+    p_norm = p_emb.norm(p=2, dim=1, keepdim=True)
+    norms = (a_norm, n_norm, p_norm)
+
+    return triplet_loss, norms, torch.mean(hardest_positive_dist), torch.mean(hardest_negative_dist)
