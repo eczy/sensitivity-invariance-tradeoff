@@ -105,7 +105,7 @@ if __name__ == "__main__":
     if input_args.reset and os.path.exists(model_dir): 
         shutil.rmtree(model_dir)
     if not os.path.exists(model_dir): 
-        os.mkdir(model_dir)
+        os.makedirs(model_dir)
 
     shutil.copyfile(input_args.config, os.path.join(model_dir, 'config.ini'))
 
