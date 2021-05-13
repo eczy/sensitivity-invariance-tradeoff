@@ -21,7 +21,8 @@ class EmbeddingNet(nn.Module):
                                 )
         
         # TODO is this okay
-        # self.step1 = nn.Sequential(nn.Linear(embed_dim, num_classes)), 
+        self.test = nn.Linear(embed_dim, num_classes)
+        self.probs = nn.Sequential(nn.Linear(embed_dim, num_classes), nn.Softmax(dim=1)) 
         self.fc = nn.Sequential(nn.Linear(embed_dim, num_classes), 
                                 nn.LogSoftmax(dim=1)) 
 
@@ -34,7 +35,12 @@ class EmbeddingNet(nn.Module):
     def forward(self, x):
         output = self.get_embedding(x)
 
-        # import pdb; pdb.set_trace();
+        out_logit = self.fc(output)
+        out_nologit = self.test(output)
+        out_probs = self.probs(output)
+
+        # import pdb; pdb.set_trace();        
+
         output = self.fc(output)
         return output
 
