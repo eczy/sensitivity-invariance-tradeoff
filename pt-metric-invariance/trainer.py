@@ -194,7 +194,7 @@ if __name__ == "__main__":
         writer.add_scalars(f'loss_overall', {
             'test orig epoch accuracy': orig_acc,
             'test sensitivity epoch accuracy': sensitivity_acc,
-            'test invariance epoch  loss':invariance_acc}, epoch)   
+            'test invariance epoch accuracy':invariance_acc}, epoch)   
 
         writer.add_scalar('acc_test/orig epoch loss', orig_acc, epoch)     
         writer.add_scalar('acc_test/sensitivity epoch loss', sensitivity_acc, epoch)     
