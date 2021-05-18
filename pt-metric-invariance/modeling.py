@@ -8,9 +8,9 @@ import sampler
 import attacks
 
 
-def construct_loss(config, model, inputs, adv_inputs, labels, device): 
+def construct_loss(config, model, inputs, invar_inputs, labels, device): 
     loss = 0.0
-    adv_inputs = adv_inputs.unsqueeze(1) #torch.Size([256, 1, 28, 28])
+    invar_inputs = invar_inputs.unsqueeze(1) #torch.Size([256, 1, 28, 28])
 
     nat_embeddings = model.get_embedding(inputs)
     adv_embeddings = None
@@ -27,7 +27,7 @@ def construct_loss(config, model, inputs, adv_inputs, labels, device):
         if config.get('invariance', 'mode') == "linf":
             eps = config.getfloat('invariance', 'epsilon')
             # import pdb; pdb.set_trace();
-            invar_embeddings = model.get_embedding(adv_inputs)
+            invar_embeddings = model.get_embedding(invar_inputs)
 
     if config.getboolean('x_ent', 'use') is True: 
         nll_loss = torch.nn.NLLLoss()
@@ -36,14 +36,21 @@ def construct_loss(config, model, inputs, adv_inputs, labels, device):
             inputs = sens_image
 
         elif config.get('x_ent', 'perturbation') == "invariance":
-            inputs = adv_inputs
+            inputs = invar_inputs
 
         outputs = model(inputs)
         xe_loss = nll_loss(outputs, labels)
         
-        if config.getboolean('x_ent', 'as_reg') is True:
+        if config.getboolean('x_ent', 'add_norm_reg') is True:
             lambda_xe = config.getfloat('x_ent', 'lambda')
-            xe_loss *= lambda_xe 
+            
+            if config.getboolean('x_ent', 'norm_image_adversarial') is True:
+                norm_image = invar_inputs
+            else: 
+                norm_image = inputs
+
+            xe_reg = lambda_xe * torch.norm(norm_image) 
+            xe_loss += xe_reg 
 
         loss += xe_loss
 
@@ -141,4 +148,8 @@ def construct_loss(config, model, inputs, adv_inputs, labels, device):
             lambda_reg = config.getfloat('triplet_additional', 'reg_embed_lambda')
             loss += lambda_reg * torch.mean(norm)
 
+    # print("********************SANITY CHECK********************")
+    # print(locals())
+    # import pdb; 
+    # pdb.set_trace()
     return loss, pos_mask, neg_mask
