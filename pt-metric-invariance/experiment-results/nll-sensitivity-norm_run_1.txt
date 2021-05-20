@@ -1,0 +1,2604 @@
+args: Namespace(config='./configs/nll_sensitivity_norm.ini', device=0, reset=False)
+*****Plotting embeddings at iter: 0****
+Training @ epoch = 0, 0/235, loss = 88.35403, pos_mask = inf, neg_mask = inf
+Training @ epoch = 0, 60/235, loss = 89.09572, pos_mask = inf, neg_mask = inf
+Training @ epoch = 0, 120/235, loss = 86.66012, pos_mask = inf, neg_mask = inf
+Training @ epoch = 0, 180/235, loss = 86.12020, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 82.62
+***********sensitivity test set **********
+Accuracy: 80.59
+***********invariance test set **********
+Accuracy: 64.74
+
+Patience= 50, Time=0.46946, train_epoch_loss = 87.4014242618642, test_epoch_acc = 64.74
+                                                                                                    
+Training @ epoch = 1, 0/235, loss = 86.07687, pos_mask = inf, neg_mask = inf
+Training @ epoch = 1, 60/235, loss = 85.38689, pos_mask = inf, neg_mask = inf
+Training @ epoch = 1, 120/235, loss = 86.47225, pos_mask = inf, neg_mask = inf
+Training @ epoch = 1, 180/235, loss = 87.12309, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 91.93
+***********sensitivity test set **********
+Accuracy: 91.48
+***********invariance test set **********
+Accuracy: 75.78
+
+Patience= 50, Time=0.86404, train_epoch_loss = 86.5454954106757, test_epoch_acc = 75.78
+                                                                                                    
+Training @ epoch = 2, 0/235, loss = 84.32745, pos_mask = inf, neg_mask = inf
+Training @ epoch = 2, 60/235, loss = 86.17001, pos_mask = inf, neg_mask = inf
+Training @ epoch = 2, 120/235, loss = 85.98325, pos_mask = inf, neg_mask = inf
+Training @ epoch = 2, 180/235, loss = 86.72504, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 94.24
+***********sensitivity test set **********
+Accuracy: 93.55
+***********invariance test set **********
+Accuracy: 79.13
+
+Patience= 50, Time=1.25814, train_epoch_loss = 86.322114449359, test_epoch_acc = 79.13
+                                                                                                    
+Training @ epoch = 3, 0/235, loss = 86.72804, pos_mask = inf, neg_mask = inf
+Training @ epoch = 3, 60/235, loss = 86.95612, pos_mask = inf, neg_mask = inf
+Training @ epoch = 3, 120/235, loss = 87.26760, pos_mask = inf, neg_mask = inf
+Training @ epoch = 3, 180/235, loss = 87.41888, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 94.96
+***********sensitivity test set **********
+Accuracy: 94.16
+***********invariance test set **********
+Accuracy: 79.16
+
+Patience= 50, Time=1.65658, train_epoch_loss = 86.2215070846233, test_epoch_acc = 79.16
+                                                                                                    
+Training @ epoch = 4, 0/235, loss = 87.04549, pos_mask = inf, neg_mask = inf
+Training @ epoch = 4, 60/235, loss = 86.51907, pos_mask = inf, neg_mask = inf
+Training @ epoch = 4, 120/235, loss = 86.54915, pos_mask = inf, neg_mask = inf
+Training @ epoch = 4, 180/235, loss = 86.51948, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 95.83
+***********sensitivity test set **********
+Accuracy: 95.45
+***********invariance test set **********
+Accuracy: 81.5
+
+Patience= 50, Time=2.05172, train_epoch_loss = 86.17101132007356, test_epoch_acc = 81.5
+                                                                                                    
+Training @ epoch = 5, 0/235, loss = 86.06944, pos_mask = inf, neg_mask = inf
+Training @ epoch = 5, 60/235, loss = 86.88747, pos_mask = inf, neg_mask = inf
+Training @ epoch = 5, 120/235, loss = 87.79207, pos_mask = inf, neg_mask = inf
+Training @ epoch = 5, 180/235, loss = 85.48586, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 96.57
+***********sensitivity test set **********
+Accuracy: 96.34
+***********invariance test set **********
+Accuracy: 83.11
+
+Patience= 50, Time=2.44783, train_epoch_loss = 86.12885823351272, test_epoch_acc = 83.11
+                                                                                                    
+Training @ epoch = 6, 0/235, loss = 86.28138, pos_mask = inf, neg_mask = inf
+Training @ epoch = 6, 60/235, loss = 85.29605, pos_mask = inf, neg_mask = inf
+Training @ epoch = 6, 120/235, loss = 85.78022, pos_mask = inf, neg_mask = inf
+Training @ epoch = 6, 180/235, loss = 87.31752, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 96.79
+***********sensitivity test set **********
+Accuracy: 96.45
+***********invariance test set **********
+Accuracy: 83.72
+
+Patience= 50, Time=2.84531, train_epoch_loss = 86.10581903660551, test_epoch_acc = 83.72
+                                                                                                    
+Training @ epoch = 7, 0/235, loss = 87.16142, pos_mask = inf, neg_mask = inf
+Training @ epoch = 7, 60/235, loss = 86.50056, pos_mask = inf, neg_mask = inf
+Training @ epoch = 7, 120/235, loss = 86.21107, pos_mask = inf, neg_mask = inf
+Training @ epoch = 7, 180/235, loss = 85.64861, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 97.11
+***********sensitivity test set **********
+Accuracy: 96.83
+***********invariance test set **********
+Accuracy: 84.39
+
+Patience= 50, Time=3.24052, train_epoch_loss = 86.08663507015147, test_epoch_acc = 84.39
+                                                                                                    
+Training @ epoch = 8, 0/235, loss = 86.56540, pos_mask = inf, neg_mask = inf
+Training @ epoch = 8, 60/235, loss = 86.16344, pos_mask = inf, neg_mask = inf
+Training @ epoch = 8, 120/235, loss = 86.14355, pos_mask = inf, neg_mask = inf
+Training @ epoch = 8, 180/235, loss = 86.40357, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 97.37
+***********sensitivity test set **********
+Accuracy: 97.2
+***********invariance test set **********
+Accuracy: 85.39
+
+Patience= 50, Time=3.63833, train_epoch_loss = 86.07463471432949, test_epoch_acc = 85.39
+                                                                                                    
+Training @ epoch = 9, 0/235, loss = 86.48268, pos_mask = inf, neg_mask = inf
+Training @ epoch = 9, 60/235, loss = 84.84480, pos_mask = inf, neg_mask = inf
+Training @ epoch = 9, 120/235, loss = 85.30609, pos_mask = inf, neg_mask = inf
+Training @ epoch = 9, 180/235, loss = 86.52625, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 97.47
+***********sensitivity test set **********
+Accuracy: 97.29
+***********invariance test set **********
+Accuracy: 84.47
+
+Patience= 49, Time=4.03544, train_epoch_loss = 86.06025619506836, test_epoch_acc = 84.47
+                                                                                                    
+Training @ epoch = 10, 0/235, loss = 86.09904, pos_mask = inf, neg_mask = inf
+Training @ epoch = 10, 60/235, loss = 85.38850, pos_mask = inf, neg_mask = inf
+Training @ epoch = 10, 120/235, loss = 87.19913, pos_mask = inf, neg_mask = inf
+Training @ epoch = 10, 180/235, loss = 84.03912, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 97.66
+***********sensitivity test set **********
+Accuracy: 97.31
+***********invariance test set **********
+Accuracy: 86.32
+
+Patience= 49, Time=4.43257, train_epoch_loss = 86.05296018884538, test_epoch_acc = 86.32
+                                                                                                    
+Training @ epoch = 11, 0/235, loss = 85.20126, pos_mask = inf, neg_mask = inf
+Training @ epoch = 11, 60/235, loss = 85.29857, pos_mask = inf, neg_mask = inf
+Training @ epoch = 11, 120/235, loss = 86.49997, pos_mask = inf, neg_mask = inf
+Training @ epoch = 11, 180/235, loss = 87.42959, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 97.93
+***********sensitivity test set **********
+Accuracy: 97.72
+***********invariance test set **********
+Accuracy: 84.71
+
+Patience= 48, Time=4.82905, train_epoch_loss = 86.04449284330327, test_epoch_acc = 84.71
+                                                                                                    
+Training @ epoch = 12, 0/235, loss = 85.96639, pos_mask = inf, neg_mask = inf
+Training @ epoch = 12, 60/235, loss = 85.85406, pos_mask = inf, neg_mask = inf
+Training @ epoch = 12, 120/235, loss = 84.54305, pos_mask = inf, neg_mask = inf
+Training @ epoch = 12, 180/235, loss = 85.57124, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 97.88
+***********sensitivity test set **********
+Accuracy: 97.63
+***********invariance test set **********
+Accuracy: 84.74
+
+Patience= 47, Time=5.22540, train_epoch_loss = 86.0356231689453, test_epoch_acc = 84.74
+                                                                                                    
+Training @ epoch = 13, 0/235, loss = 86.93735, pos_mask = inf, neg_mask = inf
+Training @ epoch = 13, 60/235, loss = 86.61371, pos_mask = inf, neg_mask = inf
+Training @ epoch = 13, 120/235, loss = 84.54526, pos_mask = inf, neg_mask = inf
+Training @ epoch = 13, 180/235, loss = 88.32475, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.16
+***********sensitivity test set **********
+Accuracy: 97.95
+***********invariance test set **********
+Accuracy: 85.9
+
+Patience= 46, Time=5.62162, train_epoch_loss = 86.02982002420629, test_epoch_acc = 85.9
+                                                                                                    
+Training @ epoch = 14, 0/235, loss = 86.44273, pos_mask = inf, neg_mask = inf
+Training @ epoch = 14, 60/235, loss = 86.09034, pos_mask = inf, neg_mask = inf
+Training @ epoch = 14, 120/235, loss = 86.10400, pos_mask = inf, neg_mask = inf
+Training @ epoch = 14, 180/235, loss = 85.82858, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 97.9
+***********sensitivity test set **********
+Accuracy: 97.74
+***********invariance test set **********
+Accuracy: 86.45
+
+Patience= 46, Time=6.02073, train_epoch_loss = 86.02433208709067, test_epoch_acc = 86.45
+                                                                                                    
+Training @ epoch = 15, 0/235, loss = 87.60255, pos_mask = inf, neg_mask = inf
+Training @ epoch = 15, 60/235, loss = 85.71495, pos_mask = inf, neg_mask = inf
+Training @ epoch = 15, 120/235, loss = 86.04690, pos_mask = inf, neg_mask = inf
+Training @ epoch = 15, 180/235, loss = 85.31023, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.22
+***********sensitivity test set **********
+Accuracy: 97.99
+***********invariance test set **********
+Accuracy: 83.83
+
+Patience= 45, Time=6.41641, train_epoch_loss = 86.01964116197951, test_epoch_acc = 83.83
+                                                                                                    
+Training @ epoch = 16, 0/235, loss = 86.86128, pos_mask = inf, neg_mask = inf
+Training @ epoch = 16, 60/235, loss = 86.93084, pos_mask = inf, neg_mask = inf
+Training @ epoch = 16, 120/235, loss = 86.22141, pos_mask = inf, neg_mask = inf
+Training @ epoch = 16, 180/235, loss = 86.26226, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.35
+***********sensitivity test set **********
+Accuracy: 98.22
+***********invariance test set **********
+Accuracy: 85.85
+
+Patience= 44, Time=6.81281, train_epoch_loss = 86.01264309172934, test_epoch_acc = 85.85
+                                                                                                    
+Training @ epoch = 17, 0/235, loss = 85.59528, pos_mask = inf, neg_mask = inf
+Training @ epoch = 17, 60/235, loss = 87.11548, pos_mask = inf, neg_mask = inf
+Training @ epoch = 17, 120/235, loss = 86.29607, pos_mask = inf, neg_mask = inf
+Training @ epoch = 17, 180/235, loss = 87.91714, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.26
+***********sensitivity test set **********
+Accuracy: 97.95
+***********invariance test set **********
+Accuracy: 81.41
+
+Patience= 43, Time=7.21131, train_epoch_loss = 86.0116150876309, test_epoch_acc = 81.41
+                                                                                                    
+Training @ epoch = 18, 0/235, loss = 86.65132, pos_mask = inf, neg_mask = inf
+Training @ epoch = 18, 60/235, loss = 85.62334, pos_mask = inf, neg_mask = inf
+Training @ epoch = 18, 120/235, loss = 86.54228, pos_mask = inf, neg_mask = inf
+Training @ epoch = 18, 180/235, loss = 85.39169, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.41
+***********sensitivity test set **********
+Accuracy: 98.28
+***********invariance test set **********
+Accuracy: 86.83
+
+Patience= 43, Time=7.60796, train_epoch_loss = 86.00588377282975, test_epoch_acc = 86.83
+                                                                                                    
+Training @ epoch = 19, 0/235, loss = 86.28623, pos_mask = inf, neg_mask = inf
+Training @ epoch = 19, 60/235, loss = 87.22641, pos_mask = inf, neg_mask = inf
+Training @ epoch = 19, 120/235, loss = 85.29595, pos_mask = inf, neg_mask = inf
+Training @ epoch = 19, 180/235, loss = 86.19024, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.43
+***********sensitivity test set **********
+Accuracy: 98.26
+***********invariance test set **********
+Accuracy: 87.29
+
+Patience= 43, Time=8.00443, train_epoch_loss = 86.00294561183199, test_epoch_acc = 87.29
+                                                                                                    
+Training @ epoch = 20, 0/235, loss = 85.75450, pos_mask = inf, neg_mask = inf
+Training @ epoch = 20, 60/235, loss = 86.16814, pos_mask = inf, neg_mask = inf
+Training @ epoch = 20, 120/235, loss = 86.73595, pos_mask = inf, neg_mask = inf
+Training @ epoch = 20, 180/235, loss = 87.16060, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.46
+***********sensitivity test set **********
+Accuracy: 98.3
+***********invariance test set **********
+Accuracy: 85.48
+
+Patience= 42, Time=8.40271, train_epoch_loss = 86.00026993447162, test_epoch_acc = 85.48
+                                                                                                    
+Training @ epoch = 21, 0/235, loss = 85.66267, pos_mask = inf, neg_mask = inf
+Training @ epoch = 21, 60/235, loss = 87.16211, pos_mask = inf, neg_mask = inf
+Training @ epoch = 21, 120/235, loss = 86.35277, pos_mask = inf, neg_mask = inf
+Training @ epoch = 21, 180/235, loss = 86.21108, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.55
+***********sensitivity test set **********
+Accuracy: 98.42
+***********invariance test set **********
+Accuracy: 85.1
+
+Patience= 41, Time=8.79933, train_epoch_loss = 85.99777979749314, test_epoch_acc = 85.1
+                                                                                                    
+Training @ epoch = 22, 0/235, loss = 86.17482, pos_mask = inf, neg_mask = inf
+Training @ epoch = 22, 60/235, loss = 85.75162, pos_mask = inf, neg_mask = inf
+Training @ epoch = 22, 120/235, loss = 85.54719, pos_mask = inf, neg_mask = inf
+Training @ epoch = 22, 180/235, loss = 85.16990, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.55
+***********sensitivity test set **********
+Accuracy: 98.35
+***********invariance test set **********
+Accuracy: 86.99
+
+Patience= 40, Time=9.19705, train_epoch_loss = 85.99386702192591, test_epoch_acc = 86.99
+                                                                                                    
+Training @ epoch = 23, 0/235, loss = 87.05099, pos_mask = inf, neg_mask = inf
+Training @ epoch = 23, 60/235, loss = 86.40012, pos_mask = inf, neg_mask = inf
+Training @ epoch = 23, 120/235, loss = 86.04974, pos_mask = inf, neg_mask = inf
+Training @ epoch = 23, 180/235, loss = 85.96475, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.73
+***********sensitivity test set **********
+Accuracy: 98.52
+***********invariance test set **********
+Accuracy: 85.0
+
+Patience= 39, Time=9.59418, train_epoch_loss = 85.99150875984354, test_epoch_acc = 85.0
+                                                                                                    
+Training @ epoch = 24, 0/235, loss = 86.15951, pos_mask = inf, neg_mask = inf
+Training @ epoch = 24, 60/235, loss = 85.60394, pos_mask = inf, neg_mask = inf
+Training @ epoch = 24, 120/235, loss = 84.71060, pos_mask = inf, neg_mask = inf
+Training @ epoch = 24, 180/235, loss = 86.97850, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.59
+***********sensitivity test set **********
+Accuracy: 98.43
+***********invariance test set **********
+Accuracy: 83.16
+
+Patience= 38, Time=9.99296, train_epoch_loss = 85.98930675425429, test_epoch_acc = 83.16
+                                                                                                    
+Training @ epoch = 25, 0/235, loss = 85.13139, pos_mask = inf, neg_mask = inf
+Training @ epoch = 25, 60/235, loss = 86.75178, pos_mask = inf, neg_mask = inf
+Training @ epoch = 25, 120/235, loss = 84.91907, pos_mask = inf, neg_mask = inf
+Training @ epoch = 25, 180/235, loss = 86.06794, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.68
+***********sensitivity test set **********
+Accuracy: 98.56
+***********invariance test set **********
+Accuracy: 83.11
+
+Patience= 37, Time=10.39120, train_epoch_loss = 85.98625796703583, test_epoch_acc = 83.11
+                                                                                                    
+Training @ epoch = 26, 0/235, loss = 86.78631, pos_mask = inf, neg_mask = inf
+Training @ epoch = 26, 60/235, loss = 86.64895, pos_mask = inf, neg_mask = inf
+Training @ epoch = 26, 120/235, loss = 85.86417, pos_mask = inf, neg_mask = inf
+Training @ epoch = 26, 180/235, loss = 87.88072, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.57
+***********sensitivity test set **********
+Accuracy: 98.36
+***********invariance test set **********
+Accuracy: 84.05
+
+Patience= 36, Time=10.78864, train_epoch_loss = 85.98561831535177, test_epoch_acc = 84.05
+                                                                                                    
+Training @ epoch = 27, 0/235, loss = 86.57549, pos_mask = inf, neg_mask = inf
+Training @ epoch = 27, 60/235, loss = 86.05960, pos_mask = inf, neg_mask = inf
+Training @ epoch = 27, 120/235, loss = 87.70079, pos_mask = inf, neg_mask = inf
+Training @ epoch = 27, 180/235, loss = 86.61699, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.65
+***********sensitivity test set **********
+Accuracy: 98.55
+***********invariance test set **********
+Accuracy: 86.95
+
+Patience= 35, Time=11.18475, train_epoch_loss = 85.9839743918561, test_epoch_acc = 86.95
+                                                                                                    
+Training @ epoch = 28, 0/235, loss = 86.08185, pos_mask = inf, neg_mask = inf
+Training @ epoch = 28, 60/235, loss = 84.85761, pos_mask = inf, neg_mask = inf
+Training @ epoch = 28, 120/235, loss = 87.40690, pos_mask = inf, neg_mask = inf
+Training @ epoch = 28, 180/235, loss = 86.00996, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.72
+***********sensitivity test set **********
+Accuracy: 98.51
+***********invariance test set **********
+Accuracy: 81.24
+
+Patience= 34, Time=11.58241, train_epoch_loss = 85.98093079911902, test_epoch_acc = 81.24
+                                                                                                    
+Training @ epoch = 29, 0/235, loss = 86.27424, pos_mask = inf, neg_mask = inf
+Training @ epoch = 29, 60/235, loss = 85.93314, pos_mask = inf, neg_mask = inf
+Training @ epoch = 29, 120/235, loss = 87.93223, pos_mask = inf, neg_mask = inf
+Training @ epoch = 29, 180/235, loss = 84.64410, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.63
+***********sensitivity test set **********
+Accuracy: 98.52
+***********invariance test set **********
+Accuracy: 85.81
+
+Patience= 33, Time=11.98094, train_epoch_loss = 85.98350133692965, test_epoch_acc = 85.81
+                                                                                                    
+Training @ epoch = 30, 0/235, loss = 86.96855, pos_mask = inf, neg_mask = inf
+Training @ epoch = 30, 60/235, loss = 85.48320, pos_mask = inf, neg_mask = inf
+Training @ epoch = 30, 120/235, loss = 85.67739, pos_mask = inf, neg_mask = inf
+Training @ epoch = 30, 180/235, loss = 86.30172, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.63
+***********sensitivity test set **********
+Accuracy: 98.42
+***********invariance test set **********
+Accuracy: 85.31
+
+Patience= 32, Time=12.37734, train_epoch_loss = 85.97909037813227, test_epoch_acc = 85.31
+                                                                                                    
+Training @ epoch = 31, 0/235, loss = 87.86563, pos_mask = inf, neg_mask = inf
+Training @ epoch = 31, 60/235, loss = 84.47996, pos_mask = inf, neg_mask = inf
+Training @ epoch = 31, 120/235, loss = 85.28338, pos_mask = inf, neg_mask = inf
+Training @ epoch = 31, 180/235, loss = 86.17778, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.75
+***********sensitivity test set **********
+Accuracy: 98.56
+***********invariance test set **********
+Accuracy: 79.41
+
+Patience= 31, Time=12.77478, train_epoch_loss = 85.97918626501205, test_epoch_acc = 79.41
+                                                                                                    
+Training @ epoch = 32, 0/235, loss = 85.61700, pos_mask = inf, neg_mask = inf
+Training @ epoch = 32, 60/235, loss = 86.52959, pos_mask = inf, neg_mask = inf
+Training @ epoch = 32, 120/235, loss = 85.82808, pos_mask = inf, neg_mask = inf
+Training @ epoch = 32, 180/235, loss = 86.30198, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.76
+***********sensitivity test set **********
+Accuracy: 98.62
+***********invariance test set **********
+Accuracy: 85.58
+
+Patience= 30, Time=13.17086, train_epoch_loss = 85.97886178848591, test_epoch_acc = 85.58
+                                                                                                    
+Training @ epoch = 33, 0/235, loss = 84.98415, pos_mask = inf, neg_mask = inf
+Training @ epoch = 33, 60/235, loss = 85.90299, pos_mask = inf, neg_mask = inf
+Training @ epoch = 33, 120/235, loss = 85.71671, pos_mask = inf, neg_mask = inf
+Training @ epoch = 33, 180/235, loss = 85.29206, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.8
+***********sensitivity test set **********
+Accuracy: 98.69
+***********invariance test set **********
+Accuracy: 84.93
+
+Patience= 29, Time=13.56769, train_epoch_loss = 85.97711382926778, test_epoch_acc = 84.93
+                                                                                                    
+Training @ epoch = 34, 0/235, loss = 85.25513, pos_mask = inf, neg_mask = inf
+Training @ epoch = 34, 60/235, loss = 86.76748, pos_mask = inf, neg_mask = inf
+Training @ epoch = 34, 120/235, loss = 85.68050, pos_mask = inf, neg_mask = inf
+Training @ epoch = 34, 180/235, loss = 87.27914, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.82
+***********sensitivity test set **********
+Accuracy: 98.69
+***********invariance test set **********
+Accuracy: 84.32
+
+Patience= 28, Time=13.96568, train_epoch_loss = 85.97737876405107, test_epoch_acc = 84.32
+                                                                                                    
+Training @ epoch = 35, 0/235, loss = 85.67471, pos_mask = inf, neg_mask = inf
+Training @ epoch = 35, 60/235, loss = 86.34142, pos_mask = inf, neg_mask = inf
+Training @ epoch = 35, 120/235, loss = 86.77351, pos_mask = inf, neg_mask = inf
+Training @ epoch = 35, 180/235, loss = 85.45772, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.76
+***********sensitivity test set **********
+Accuracy: 98.64
+***********invariance test set **********
+Accuracy: 85.29
+
+Patience= 27, Time=14.36262, train_epoch_loss = 85.97513917963556, test_epoch_acc = 85.29
+                                                                                                    
+Training @ epoch = 36, 0/235, loss = 85.96545, pos_mask = inf, neg_mask = inf
+Training @ epoch = 36, 60/235, loss = 85.06668, pos_mask = inf, neg_mask = inf
+Training @ epoch = 36, 120/235, loss = 85.04698, pos_mask = inf, neg_mask = inf
+Training @ epoch = 36, 180/235, loss = 85.77554, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.74
+***********sensitivity test set **********
+Accuracy: 98.63
+***********invariance test set **********
+Accuracy: 83.25
+
+Patience= 26, Time=14.76171, train_epoch_loss = 85.97495469438269, test_epoch_acc = 83.25
+                                                                                                    
+Training @ epoch = 37, 0/235, loss = 86.12603, pos_mask = inf, neg_mask = inf
+Training @ epoch = 37, 60/235, loss = 86.44501, pos_mask = inf, neg_mask = inf
+Training @ epoch = 37, 120/235, loss = 86.30209, pos_mask = inf, neg_mask = inf
+Training @ epoch = 37, 180/235, loss = 85.84399, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.84
+***********sensitivity test set **********
+Accuracy: 98.68
+***********invariance test set **********
+Accuracy: 85.02
+
+Patience= 25, Time=15.15825, train_epoch_loss = 85.9740104675293, test_epoch_acc = 85.02
+                                                                                                    
+Training @ epoch = 38, 0/235, loss = 85.37619, pos_mask = inf, neg_mask = inf
+Training @ epoch = 38, 60/235, loss = 86.24094, pos_mask = inf, neg_mask = inf
+Training @ epoch = 38, 120/235, loss = 87.62370, pos_mask = inf, neg_mask = inf
+Training @ epoch = 38, 180/235, loss = 86.09473, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.71
+***********sensitivity test set **********
+Accuracy: 98.58
+***********invariance test set **********
+Accuracy: 78.1
+
+Patience= 24, Time=15.55467, train_epoch_loss = 85.97459111315139, test_epoch_acc = 78.1
+                                                                                                    
+Training @ epoch = 39, 0/235, loss = 85.72250, pos_mask = inf, neg_mask = inf
+Training @ epoch = 39, 60/235, loss = 87.58997, pos_mask = inf, neg_mask = inf
+Training @ epoch = 39, 120/235, loss = 85.51086, pos_mask = inf, neg_mask = inf
+Training @ epoch = 39, 180/235, loss = 85.49997, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.75
+***********sensitivity test set **********
+Accuracy: 98.67
+***********invariance test set **********
+Accuracy: 81.5
+
+Patience= 23, Time=15.95373, train_epoch_loss = 85.97546962981528, test_epoch_acc = 81.5
+                                                                                                    
+Training @ epoch = 40, 0/235, loss = 87.00997, pos_mask = inf, neg_mask = inf
+Training @ epoch = 40, 60/235, loss = 85.45015, pos_mask = inf, neg_mask = inf
+Training @ epoch = 40, 120/235, loss = 86.62823, pos_mask = inf, neg_mask = inf
+Training @ epoch = 40, 180/235, loss = 86.54301, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.85
+***********sensitivity test set **********
+Accuracy: 98.74
+***********invariance test set **********
+Accuracy: 83.18
+
+Patience= 22, Time=16.35017, train_epoch_loss = 85.97471967656561, test_epoch_acc = 83.18
+                                                                                                    
+Training @ epoch = 41, 0/235, loss = 86.35410, pos_mask = inf, neg_mask = inf
+Training @ epoch = 41, 60/235, loss = 85.00966, pos_mask = inf, neg_mask = inf
+Training @ epoch = 41, 120/235, loss = 86.90206, pos_mask = inf, neg_mask = inf
+Training @ epoch = 41, 180/235, loss = 86.75132, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.8
+***********sensitivity test set **********
+Accuracy: 98.69
+***********invariance test set **********
+Accuracy: 84.14
+
+Patience= 21, Time=16.74623, train_epoch_loss = 85.97296149071227, test_epoch_acc = 84.14
+                                                                                                    
+Training @ epoch = 42, 0/235, loss = 85.35354, pos_mask = inf, neg_mask = inf
+Training @ epoch = 42, 60/235, loss = 85.62941, pos_mask = inf, neg_mask = inf
+Training @ epoch = 42, 120/235, loss = 85.58374, pos_mask = inf, neg_mask = inf
+Training @ epoch = 42, 180/235, loss = 87.07922, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.75
+***********sensitivity test set **********
+Accuracy: 98.7
+***********invariance test set **********
+Accuracy: 80.45
+
+Patience= 20, Time=17.14373, train_epoch_loss = 85.97269741626496, test_epoch_acc = 80.45
+                                                                                                    
+Training @ epoch = 43, 0/235, loss = 86.99445, pos_mask = inf, neg_mask = inf
+Training @ epoch = 43, 60/235, loss = 84.70942, pos_mask = inf, neg_mask = inf
+Training @ epoch = 43, 120/235, loss = 87.16118, pos_mask = inf, neg_mask = inf
+Training @ epoch = 43, 180/235, loss = 87.73922, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.83
+***********sensitivity test set **********
+Accuracy: 98.71
+***********invariance test set **********
+Accuracy: 84.28
+
+Patience= 19, Time=17.54092, train_epoch_loss = 85.97163280730553, test_epoch_acc = 84.28
+                                                                                                    
+Training @ epoch = 44, 0/235, loss = 86.60156, pos_mask = inf, neg_mask = inf
+Training @ epoch = 44, 60/235, loss = 86.28788, pos_mask = inf, neg_mask = inf
+Training @ epoch = 44, 120/235, loss = 85.22606, pos_mask = inf, neg_mask = inf
+Training @ epoch = 44, 180/235, loss = 86.81927, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.78
+***********sensitivity test set **********
+Accuracy: 98.65
+***********invariance test set **********
+Accuracy: 85.33
+
+Patience= 18, Time=17.93865, train_epoch_loss = 85.9710319519043, test_epoch_acc = 85.33
+                                                                                                    
+Training @ epoch = 45, 0/235, loss = 85.07166, pos_mask = inf, neg_mask = inf
+Training @ epoch = 45, 60/235, loss = 86.29687, pos_mask = inf, neg_mask = inf
+Training @ epoch = 45, 120/235, loss = 85.83157, pos_mask = inf, neg_mask = inf
+Training @ epoch = 45, 180/235, loss = 85.40237, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.89
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 82.64
+
+Patience= 17, Time=18.33678, train_epoch_loss = 85.97011020741564, test_epoch_acc = 82.64
+                                                                                                    
+Training @ epoch = 46, 0/235, loss = 86.72345, pos_mask = inf, neg_mask = inf
+Training @ epoch = 46, 60/235, loss = 86.40290, pos_mask = inf, neg_mask = inf
+Training @ epoch = 46, 120/235, loss = 85.75343, pos_mask = inf, neg_mask = inf
+Training @ epoch = 46, 180/235, loss = 85.67410, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.85
+***********sensitivity test set **********
+Accuracy: 98.8
+***********invariance test set **********
+Accuracy: 84.77
+
+Patience= 16, Time=18.73361, train_epoch_loss = 85.96887520323408, test_epoch_acc = 84.77
+                                                                                                    
+Training @ epoch = 47, 0/235, loss = 86.44682, pos_mask = inf, neg_mask = inf
+Training @ epoch = 47, 60/235, loss = 86.53833, pos_mask = inf, neg_mask = inf
+Training @ epoch = 47, 120/235, loss = 86.37534, pos_mask = inf, neg_mask = inf
+Training @ epoch = 47, 180/235, loss = 85.31518, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.63
+***********sensitivity test set **********
+Accuracy: 98.47
+***********invariance test set **********
+Accuracy: 75.32
+
+Patience= 15, Time=19.12970, train_epoch_loss = 85.96870560341694, test_epoch_acc = 75.32
+                                                                                                    
+Training @ epoch = 48, 0/235, loss = 85.75871, pos_mask = inf, neg_mask = inf
+Training @ epoch = 48, 60/235, loss = 86.00677, pos_mask = inf, neg_mask = inf
+Training @ epoch = 48, 120/235, loss = 87.12114, pos_mask = inf, neg_mask = inf
+Training @ epoch = 48, 180/235, loss = 85.57115, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.8
+***********sensitivity test set **********
+Accuracy: 98.69
+***********invariance test set **********
+Accuracy: 78.81
+
+Patience= 14, Time=19.52925, train_epoch_loss = 85.96886096710854, test_epoch_acc = 78.81
+                                                                                                    
+Training @ epoch = 49, 0/235, loss = 85.95913, pos_mask = inf, neg_mask = inf
+Training @ epoch = 49, 60/235, loss = 86.18227, pos_mask = inf, neg_mask = inf
+Training @ epoch = 49, 120/235, loss = 86.07353, pos_mask = inf, neg_mask = inf
+Training @ epoch = 49, 180/235, loss = 87.52236, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.78
+***********sensitivity test set **********
+Accuracy: 98.67
+***********invariance test set **********
+Accuracy: 79.16
+
+Patience= 13, Time=19.92549, train_epoch_loss = 85.9696982363437, test_epoch_acc = 79.16
+                                                                                                    
+Training @ epoch = 50, 0/235, loss = 85.63231, pos_mask = inf, neg_mask = inf
+Training @ epoch = 50, 60/235, loss = 85.06599, pos_mask = inf, neg_mask = inf
+Training @ epoch = 50, 120/235, loss = 87.85981, pos_mask = inf, neg_mask = inf
+Training @ epoch = 50, 180/235, loss = 85.47289, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.73
+***********sensitivity test set **********
+Accuracy: 98.71
+***********invariance test set **********
+Accuracy: 81.22
+
+Patience= 12, Time=20.32374, train_epoch_loss = 85.97171705530045, test_epoch_acc = 81.22
+                                                                                                    
+Training @ epoch = 51, 0/235, loss = 86.95283, pos_mask = inf, neg_mask = inf
+Training @ epoch = 51, 60/235, loss = 86.73857, pos_mask = inf, neg_mask = inf
+Training @ epoch = 51, 120/235, loss = 86.64262, pos_mask = inf, neg_mask = inf
+Training @ epoch = 51, 180/235, loss = 87.25808, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.83
+***********sensitivity test set **********
+Accuracy: 98.79
+***********invariance test set **********
+Accuracy: 82.15
+
+Patience= 11, Time=20.72214, train_epoch_loss = 85.96839502212849, test_epoch_acc = 82.15
+                                                                                                    
+Training @ epoch = 52, 0/235, loss = 87.40107, pos_mask = inf, neg_mask = inf
+Training @ epoch = 52, 60/235, loss = 86.60118, pos_mask = inf, neg_mask = inf
+Training @ epoch = 52, 120/235, loss = 86.53621, pos_mask = inf, neg_mask = inf
+Training @ epoch = 52, 180/235, loss = 85.64071, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.82
+***********sensitivity test set **********
+Accuracy: 98.73
+***********invariance test set **********
+Accuracy: 80.55
+
+Patience= 10, Time=21.11848, train_epoch_loss = 85.96745782405772, test_epoch_acc = 80.55
+                                                                                                    
+Training @ epoch = 53, 0/235, loss = 88.00587, pos_mask = inf, neg_mask = inf
+Training @ epoch = 53, 60/235, loss = 84.89639, pos_mask = inf, neg_mask = inf
+Training @ epoch = 53, 120/235, loss = 86.49024, pos_mask = inf, neg_mask = inf
+Training @ epoch = 53, 180/235, loss = 85.55199, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.81
+***********sensitivity test set **********
+Accuracy: 98.73
+***********invariance test set **********
+Accuracy: 83.61
+
+Patience= 9, Time=21.51658, train_epoch_loss = 85.966800640999, test_epoch_acc = 83.61
+                                                                                                    
+Training @ epoch = 54, 0/235, loss = 87.53905, pos_mask = inf, neg_mask = inf
+Training @ epoch = 54, 60/235, loss = 86.57746, pos_mask = inf, neg_mask = inf
+Training @ epoch = 54, 120/235, loss = 85.41093, pos_mask = inf, neg_mask = inf
+Training @ epoch = 54, 180/235, loss = 87.53813, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.86
+***********sensitivity test set **********
+Accuracy: 98.79
+***********invariance test set **********
+Accuracy: 83.62
+
+Patience= 8, Time=21.91300, train_epoch_loss = 85.96625921371135, test_epoch_acc = 83.62
+                                                                                                    
+Training @ epoch = 55, 0/235, loss = 87.13921, pos_mask = inf, neg_mask = inf
+Training @ epoch = 55, 60/235, loss = 85.81467, pos_mask = inf, neg_mask = inf
+Training @ epoch = 55, 120/235, loss = 86.56786, pos_mask = inf, neg_mask = inf
+Training @ epoch = 55, 180/235, loss = 87.54651, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.45
+***********sensitivity test set **********
+Accuracy: 98.35
+***********invariance test set **********
+Accuracy: 83.01
+
+Patience= 7, Time=22.30992, train_epoch_loss = 85.96921675661777, test_epoch_acc = 83.01
+                                                                                                    
+Training @ epoch = 56, 0/235, loss = 86.03378, pos_mask = inf, neg_mask = inf
+Training @ epoch = 56, 60/235, loss = 86.61765, pos_mask = inf, neg_mask = inf
+Training @ epoch = 56, 120/235, loss = 84.76079, pos_mask = inf, neg_mask = inf
+Training @ epoch = 56, 180/235, loss = 84.82896, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.88
+***********sensitivity test set **********
+Accuracy: 98.73
+***********invariance test set **********
+Accuracy: 80.76
+
+Patience= 6, Time=22.70869, train_epoch_loss = 85.9706633222864, test_epoch_acc = 80.76
+                                                                                                    
+Training @ epoch = 57, 0/235, loss = 85.74758, pos_mask = inf, neg_mask = inf
+Training @ epoch = 57, 60/235, loss = 87.00710, pos_mask = inf, neg_mask = inf
+Training @ epoch = 57, 120/235, loss = 86.43911, pos_mask = inf, neg_mask = inf
+Training @ epoch = 57, 180/235, loss = 85.65633, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.84
+***********sensitivity test set **********
+Accuracy: 98.77
+***********invariance test set **********
+Accuracy: 82.18
+
+Patience= 5, Time=23.10617, train_epoch_loss = 85.968319929407, test_epoch_acc = 82.18
+                                                                                                    
+Training @ epoch = 58, 0/235, loss = 85.34290, pos_mask = inf, neg_mask = inf
+Training @ epoch = 58, 60/235, loss = 85.51224, pos_mask = inf, neg_mask = inf
+Training @ epoch = 58, 120/235, loss = 87.88448, pos_mask = inf, neg_mask = inf
+Training @ epoch = 58, 180/235, loss = 86.32892, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.91
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 80.95
+
+Patience= 4, Time=23.50352, train_epoch_loss = 85.96475067138672, test_epoch_acc = 80.95
+                                                                                                    
+Training @ epoch = 59, 0/235, loss = 88.19462, pos_mask = inf, neg_mask = inf
+Training @ epoch = 59, 60/235, loss = 85.69135, pos_mask = inf, neg_mask = inf
+Training @ epoch = 59, 120/235, loss = 85.07037, pos_mask = inf, neg_mask = inf
+Training @ epoch = 59, 180/235, loss = 86.76662, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.92
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 83.12
+
+Patience= 3, Time=23.90084, train_epoch_loss = 85.96436858481549, test_epoch_acc = 83.12
+                                                                                                    
+Training @ epoch = 60, 0/235, loss = 83.68494, pos_mask = inf, neg_mask = inf
+Training @ epoch = 60, 60/235, loss = 86.20421, pos_mask = inf, neg_mask = inf
+Training @ epoch = 60, 120/235, loss = 86.10290, pos_mask = inf, neg_mask = inf
+Training @ epoch = 60, 180/235, loss = 84.22071, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.87
+***********sensitivity test set **********
+Accuracy: 98.84
+***********invariance test set **********
+Accuracy: 82.39
+
+Patience= 2, Time=24.29785, train_epoch_loss = 85.96612680313434, test_epoch_acc = 82.39
+                                                                                                    
+Training @ epoch = 61, 0/235, loss = 86.32408, pos_mask = inf, neg_mask = inf
+Training @ epoch = 61, 60/235, loss = 85.68987, pos_mask = inf, neg_mask = inf
+Training @ epoch = 61, 120/235, loss = 87.10679, pos_mask = inf, neg_mask = inf
+Training @ epoch = 61, 180/235, loss = 85.38281, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.9
+***********sensitivity test set **********
+Accuracy: 98.8
+***********invariance test set **********
+Accuracy: 82.19
+
+Patience= 1, Time=24.69447, train_epoch_loss = 85.96480794054396, test_epoch_acc = 82.19
+                                                                                                    
+Training @ epoch = 62, 0/235, loss = 86.71511, pos_mask = inf, neg_mask = inf
+Training @ epoch = 62, 60/235, loss = 87.38250, pos_mask = inf, neg_mask = inf
+Training @ epoch = 62, 120/235, loss = 85.69098, pos_mask = inf, neg_mask = inf
+Training @ epoch = 62, 180/235, loss = 84.73532, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.8
+***********sensitivity test set **********
+Accuracy: 98.68
+***********invariance test set **********
+Accuracy: 77.45
+
+Patience= 0, Time=25.09329, train_epoch_loss = 85.97183753480303, test_epoch_acc = 77.45
+                                                                                                    
+Training @ epoch = 63, 0/235, loss = 84.63006, pos_mask = inf, neg_mask = inf
+Training @ epoch = 63, 60/235, loss = 85.47389, pos_mask = inf, neg_mask = inf
+Training @ epoch = 63, 120/235, loss = 86.56618, pos_mask = inf, neg_mask = inf
+Training @ epoch = 63, 180/235, loss = 85.86879, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.86
+***********sensitivity test set **********
+Accuracy: 98.72
+***********invariance test set **********
+Accuracy: 78.21
+
+Patience= -1, Time=25.49037, train_epoch_loss = 85.97392996930061, test_epoch_acc = 78.21
+                                                                                                    
+Training @ epoch = 64, 0/235, loss = 85.30473, pos_mask = inf, neg_mask = inf
+Training @ epoch = 64, 60/235, loss = 85.46066, pos_mask = inf, neg_mask = inf
+Training @ epoch = 64, 120/235, loss = 86.66031, pos_mask = inf, neg_mask = inf
+Training @ epoch = 64, 180/235, loss = 85.13671, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.93
+***********sensitivity test set **********
+Accuracy: 98.8
+***********invariance test set **********
+Accuracy: 83.75
+
+Patience= -2, Time=25.88960, train_epoch_loss = 85.96920172508727, test_epoch_acc = 83.75
+                                                                                                    
+Training @ epoch = 65, 0/235, loss = 87.17297, pos_mask = inf, neg_mask = inf
+Training @ epoch = 65, 60/235, loss = 85.65418, pos_mask = inf, neg_mask = inf
+Training @ epoch = 65, 120/235, loss = 87.34087, pos_mask = inf, neg_mask = inf
+Training @ epoch = 65, 180/235, loss = 85.79408, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.89
+***********sensitivity test set **********
+Accuracy: 98.8
+***********invariance test set **********
+Accuracy: 82.38
+
+Patience= -3, Time=26.28802, train_epoch_loss = 85.96813099637944, test_epoch_acc = 82.38
+                                                                                                    
+Training @ epoch = 66, 0/235, loss = 85.29098, pos_mask = inf, neg_mask = inf
+Training @ epoch = 66, 60/235, loss = 86.03069, pos_mask = inf, neg_mask = inf
+Training @ epoch = 66, 120/235, loss = 85.40338, pos_mask = inf, neg_mask = inf
+Training @ epoch = 66, 180/235, loss = 85.44858, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 99.0
+***********sensitivity test set **********
+Accuracy: 98.86
+***********invariance test set **********
+Accuracy: 83.29
+
+Patience= -4, Time=26.68512, train_epoch_loss = 85.96370810650765, test_epoch_acc = 83.29
+                                                                                                    
+Training @ epoch = 67, 0/235, loss = 85.91380, pos_mask = inf, neg_mask = inf
+Training @ epoch = 67, 60/235, loss = 86.86050, pos_mask = inf, neg_mask = inf
+Training @ epoch = 67, 120/235, loss = 85.06957, pos_mask = inf, neg_mask = inf
+Training @ epoch = 67, 180/235, loss = 85.92850, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.81
+***********invariance test set **********
+Accuracy: 83.19
+
+Patience= -5, Time=27.08425, train_epoch_loss = 85.96376555422519, test_epoch_acc = 83.19
+                                                                                                    
+Training @ epoch = 68, 0/235, loss = 85.31907, pos_mask = inf, neg_mask = inf
+Training @ epoch = 68, 60/235, loss = 85.95901, pos_mask = inf, neg_mask = inf
+Training @ epoch = 68, 120/235, loss = 86.30219, pos_mask = inf, neg_mask = inf
+Training @ epoch = 68, 180/235, loss = 86.95920, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.94
+***********sensitivity test set **********
+Accuracy: 98.79
+***********invariance test set **********
+Accuracy: 82.82
+
+Patience= -6, Time=27.48114, train_epoch_loss = 85.96449265175677, test_epoch_acc = 82.82
+                                                                                                    
+Training @ epoch = 69, 0/235, loss = 85.31397, pos_mask = inf, neg_mask = inf
+Training @ epoch = 69, 60/235, loss = 86.83094, pos_mask = inf, neg_mask = inf
+Training @ epoch = 69, 120/235, loss = 86.62258, pos_mask = inf, neg_mask = inf
+Training @ epoch = 69, 180/235, loss = 84.62988, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.94
+***********sensitivity test set **********
+Accuracy: 98.81
+***********invariance test set **********
+Accuracy: 82.78
+
+Patience= -7, Time=27.87710, train_epoch_loss = 85.96729065915372, test_epoch_acc = 82.78
+                                                                                                    
+Training @ epoch = 70, 0/235, loss = 85.89198, pos_mask = inf, neg_mask = inf
+Training @ epoch = 70, 60/235, loss = 85.93658, pos_mask = inf, neg_mask = inf
+Training @ epoch = 70, 120/235, loss = 85.28833, pos_mask = inf, neg_mask = inf
+Training @ epoch = 70, 180/235, loss = 85.96292, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.93
+***********sensitivity test set **********
+Accuracy: 98.9
+***********invariance test set **********
+Accuracy: 82.62
+
+Patience= -8, Time=28.27526, train_epoch_loss = 85.96692076338098, test_epoch_acc = 82.62
+                                                                                                    
+Training @ epoch = 71, 0/235, loss = 86.67208, pos_mask = inf, neg_mask = inf
+Training @ epoch = 71, 60/235, loss = 87.47395, pos_mask = inf, neg_mask = inf
+Training @ epoch = 71, 120/235, loss = 84.59253, pos_mask = inf, neg_mask = inf
+Training @ epoch = 71, 180/235, loss = 86.38936, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.95
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 83.1
+
+Patience= -9, Time=28.67165, train_epoch_loss = 85.96483600697618, test_epoch_acc = 83.1
+                                                                                                    
+Training @ epoch = 72, 0/235, loss = 86.88797, pos_mask = inf, neg_mask = inf
+Training @ epoch = 72, 60/235, loss = 86.41927, pos_mask = inf, neg_mask = inf
+Training @ epoch = 72, 120/235, loss = 85.59570, pos_mask = inf, neg_mask = inf
+Training @ epoch = 72, 180/235, loss = 85.33467, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.69
+***********sensitivity test set **********
+Accuracy: 98.67
+***********invariance test set **********
+Accuracy: 79.5
+
+Patience= -10, Time=29.06938, train_epoch_loss = 85.96893787789853, test_epoch_acc = 79.5
+                                                                                                    
+Training @ epoch = 73, 0/235, loss = 86.20325, pos_mask = inf, neg_mask = inf
+Training @ epoch = 73, 60/235, loss = 87.21130, pos_mask = inf, neg_mask = inf
+Training @ epoch = 73, 120/235, loss = 85.39496, pos_mask = inf, neg_mask = inf
+Training @ epoch = 73, 180/235, loss = 84.91661, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.69
+***********sensitivity test set **********
+Accuracy: 98.64
+***********invariance test set **********
+Accuracy: 80.84
+
+Patience= -11, Time=29.46930, train_epoch_loss = 85.97367605655751, test_epoch_acc = 80.84
+                                                                                                    
+Training @ epoch = 74, 0/235, loss = 86.83633, pos_mask = inf, neg_mask = inf
+Training @ epoch = 74, 60/235, loss = 86.52972, pos_mask = inf, neg_mask = inf
+Training @ epoch = 74, 120/235, loss = 86.20363, pos_mask = inf, neg_mask = inf
+Training @ epoch = 74, 180/235, loss = 86.40968, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.92
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 83.51
+
+Patience= -12, Time=29.86601, train_epoch_loss = 85.96789070291722, test_epoch_acc = 83.51
+                                                                                                    
+Training @ epoch = 75, 0/235, loss = 85.15548, pos_mask = inf, neg_mask = inf
+Training @ epoch = 75, 60/235, loss = 86.53156, pos_mask = inf, neg_mask = inf
+Training @ epoch = 75, 120/235, loss = 86.26645, pos_mask = inf, neg_mask = inf
+Training @ epoch = 75, 180/235, loss = 86.68055, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.93
+***********sensitivity test set **********
+Accuracy: 98.79
+***********invariance test set **********
+Accuracy: 83.33
+
+Patience= -13, Time=30.26559, train_epoch_loss = 85.96677759048787, test_epoch_acc = 83.33
+                                                                                                    
+Training @ epoch = 76, 0/235, loss = 86.28627, pos_mask = inf, neg_mask = inf
+Training @ epoch = 76, 60/235, loss = 86.31324, pos_mask = inf, neg_mask = inf
+Training @ epoch = 76, 120/235, loss = 85.59762, pos_mask = inf, neg_mask = inf
+Training @ epoch = 76, 180/235, loss = 86.56618, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.92
+***********sensitivity test set **********
+Accuracy: 98.85
+***********invariance test set **********
+Accuracy: 82.24
+
+Patience= -14, Time=30.66378, train_epoch_loss = 85.96432076312126, test_epoch_acc = 82.24
+                                                                                                    
+Training @ epoch = 77, 0/235, loss = 86.23422, pos_mask = inf, neg_mask = inf
+Training @ epoch = 77, 60/235, loss = 87.72680, pos_mask = inf, neg_mask = inf
+Training @ epoch = 77, 120/235, loss = 86.32784, pos_mask = inf, neg_mask = inf
+Training @ epoch = 77, 180/235, loss = 86.42800, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.94
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 82.99
+
+Patience= -15, Time=31.06077, train_epoch_loss = 85.96225063242811, test_epoch_acc = 82.99
+                                                                                                    
+Training @ epoch = 78, 0/235, loss = 86.33460, pos_mask = inf, neg_mask = inf
+Training @ epoch = 78, 60/235, loss = 85.61729, pos_mask = inf, neg_mask = inf
+Training @ epoch = 78, 120/235, loss = 85.16823, pos_mask = inf, neg_mask = inf
+Training @ epoch = 78, 180/235, loss = 86.91096, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.91
+***********sensitivity test set **********
+Accuracy: 98.85
+***********invariance test set **********
+Accuracy: 82.82
+
+Patience= -16, Time=31.45883, train_epoch_loss = 85.96439624542886, test_epoch_acc = 82.82
+                                                                                                    
+Training @ epoch = 79, 0/235, loss = 84.77009, pos_mask = inf, neg_mask = inf
+Training @ epoch = 79, 60/235, loss = 87.95377, pos_mask = inf, neg_mask = inf
+Training @ epoch = 79, 120/235, loss = 84.17673, pos_mask = inf, neg_mask = inf
+Training @ epoch = 79, 180/235, loss = 84.68989, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.94
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 83.09
+
+Patience= -17, Time=31.85791, train_epoch_loss = 85.96398516715841, test_epoch_acc = 83.09
+                                                                                                    
+Training @ epoch = 80, 0/235, loss = 86.09074, pos_mask = inf, neg_mask = inf
+Training @ epoch = 80, 60/235, loss = 86.36425, pos_mask = inf, neg_mask = inf
+Training @ epoch = 80, 120/235, loss = 83.98754, pos_mask = inf, neg_mask = inf
+Training @ epoch = 80, 180/235, loss = 86.18036, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.86
+***********invariance test set **********
+Accuracy: 83.48
+
+Patience= -18, Time=32.25435, train_epoch_loss = 85.96209127547893, test_epoch_acc = 83.48
+                                                                                                    
+Training @ epoch = 81, 0/235, loss = 86.00744, pos_mask = inf, neg_mask = inf
+Training @ epoch = 81, 60/235, loss = 86.22081, pos_mask = inf, neg_mask = inf
+Training @ epoch = 81, 120/235, loss = 85.28775, pos_mask = inf, neg_mask = inf
+Training @ epoch = 81, 180/235, loss = 84.62031, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.93
+***********sensitivity test set **********
+Accuracy: 98.88
+***********invariance test set **********
+Accuracy: 81.68
+
+Patience= -19, Time=32.65257, train_epoch_loss = 85.96335777120387, test_epoch_acc = 81.68
+                                                                                                    
+Training @ epoch = 82, 0/235, loss = 85.49990, pos_mask = inf, neg_mask = inf
+Training @ epoch = 82, 60/235, loss = 86.71221, pos_mask = inf, neg_mask = inf
+Training @ epoch = 82, 120/235, loss = 86.18195, pos_mask = inf, neg_mask = inf
+Training @ epoch = 82, 180/235, loss = 86.45873, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.97
+***********sensitivity test set **********
+Accuracy: 98.85
+***********invariance test set **********
+Accuracy: 82.79
+
+Patience= -20, Time=33.05009, train_epoch_loss = 85.96612410849713, test_epoch_acc = 82.79
+                                                                                                    
+Training @ epoch = 83, 0/235, loss = 84.95390, pos_mask = inf, neg_mask = inf
+Training @ epoch = 83, 60/235, loss = 85.04485, pos_mask = inf, neg_mask = inf
+Training @ epoch = 83, 120/235, loss = 84.65314, pos_mask = inf, neg_mask = inf
+Training @ epoch = 83, 180/235, loss = 88.11009, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.97
+***********sensitivity test set **********
+Accuracy: 98.87
+***********invariance test set **********
+Accuracy: 82.61
+
+Patience= -21, Time=33.44751, train_epoch_loss = 85.96496098295171, test_epoch_acc = 82.61
+                                                                                                    
+Training @ epoch = 84, 0/235, loss = 85.15804, pos_mask = inf, neg_mask = inf
+Training @ epoch = 84, 60/235, loss = 86.14835, pos_mask = inf, neg_mask = inf
+Training @ epoch = 84, 120/235, loss = 85.01784, pos_mask = inf, neg_mask = inf
+Training @ epoch = 84, 180/235, loss = 85.09776, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.88
+***********sensitivity test set **********
+Accuracy: 98.86
+***********invariance test set **********
+Accuracy: 82.68
+
+Patience= -22, Time=33.84503, train_epoch_loss = 85.95980771653196, test_epoch_acc = 82.68
+                                                                                                    
+Training @ epoch = 85, 0/235, loss = 86.96772, pos_mask = inf, neg_mask = inf
+Training @ epoch = 85, 60/235, loss = 86.07928, pos_mask = inf, neg_mask = inf
+Training @ epoch = 85, 120/235, loss = 85.06837, pos_mask = inf, neg_mask = inf
+Training @ epoch = 85, 180/235, loss = 86.32909, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.94
+***********sensitivity test set **********
+Accuracy: 98.85
+***********invariance test set **********
+Accuracy: 83.25
+
+Patience= -23, Time=34.24175, train_epoch_loss = 85.96534722510805, test_epoch_acc = 83.25
+                                                                                                    
+Training @ epoch = 86, 0/235, loss = 84.56937, pos_mask = inf, neg_mask = inf
+Training @ epoch = 86, 60/235, loss = 85.56902, pos_mask = inf, neg_mask = inf
+Training @ epoch = 86, 120/235, loss = 85.92382, pos_mask = inf, neg_mask = inf
+Training @ epoch = 86, 180/235, loss = 86.05334, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.94
+***********sensitivity test set **********
+Accuracy: 98.87
+***********invariance test set **********
+Accuracy: 82.92
+
+Patience= -24, Time=34.63817, train_epoch_loss = 85.96570351783265, test_epoch_acc = 82.92
+                                                                                                    
+Training @ epoch = 87, 0/235, loss = 85.62907, pos_mask = inf, neg_mask = inf
+Training @ epoch = 87, 60/235, loss = 87.23759, pos_mask = inf, neg_mask = inf
+Training @ epoch = 87, 120/235, loss = 84.95290, pos_mask = inf, neg_mask = inf
+Training @ epoch = 87, 180/235, loss = 85.24037, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.93
+***********sensitivity test set **********
+Accuracy: 98.82
+***********invariance test set **********
+Accuracy: 81.31
+
+Patience= -25, Time=35.03888, train_epoch_loss = 85.9616130260711, test_epoch_acc = 81.31
+                                                                                                    
+Training @ epoch = 88, 0/235, loss = 87.31734, pos_mask = inf, neg_mask = inf
+Training @ epoch = 88, 60/235, loss = 86.44013, pos_mask = inf, neg_mask = inf
+Training @ epoch = 88, 120/235, loss = 86.84100, pos_mask = inf, neg_mask = inf
+Training @ epoch = 88, 180/235, loss = 86.85036, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.86
+***********sensitivity test set **********
+Accuracy: 98.8
+***********invariance test set **********
+Accuracy: 79.49
+
+Patience= -26, Time=35.43659, train_epoch_loss = 85.9667273988115, test_epoch_acc = 79.49
+                                                                                                    
+Training @ epoch = 89, 0/235, loss = 86.60226, pos_mask = inf, neg_mask = inf
+Training @ epoch = 89, 60/235, loss = 86.92650, pos_mask = inf, neg_mask = inf
+Training @ epoch = 89, 120/235, loss = 86.15798, pos_mask = inf, neg_mask = inf
+Training @ epoch = 89, 180/235, loss = 84.98974, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.95
+***********sensitivity test set **********
+Accuracy: 98.89
+***********invariance test set **********
+Accuracy: 82.74
+
+Patience= -27, Time=35.83392, train_epoch_loss = 85.96286866208341, test_epoch_acc = 82.74
+                                                                                                    
+Training @ epoch = 90, 0/235, loss = 85.87688, pos_mask = inf, neg_mask = inf
+Training @ epoch = 90, 60/235, loss = 84.97799, pos_mask = inf, neg_mask = inf
+Training @ epoch = 90, 120/235, loss = 86.48302, pos_mask = inf, neg_mask = inf
+Training @ epoch = 90, 180/235, loss = 85.57642, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.75
+***********sensitivity test set **********
+Accuracy: 98.6
+***********invariance test set **********
+Accuracy: 80.7
+
+Patience= -28, Time=36.23292, train_epoch_loss = 85.97519711433573, test_epoch_acc = 80.7
+                                                                                                    
+Training @ epoch = 91, 0/235, loss = 86.00611, pos_mask = inf, neg_mask = inf
+Training @ epoch = 91, 60/235, loss = 85.88006, pos_mask = inf, neg_mask = inf
+Training @ epoch = 91, 120/235, loss = 87.21958, pos_mask = inf, neg_mask = inf
+Training @ epoch = 91, 180/235, loss = 86.20553, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.9
+***********sensitivity test set **********
+Accuracy: 98.89
+***********invariance test set **********
+Accuracy: 82.06
+
+Patience= -29, Time=36.62919, train_epoch_loss = 85.96811096516062, test_epoch_acc = 82.06
+                                                                                                    
+Training @ epoch = 92, 0/235, loss = 84.63004, pos_mask = inf, neg_mask = inf
+Training @ epoch = 92, 60/235, loss = 87.17822, pos_mask = inf, neg_mask = inf
+Training @ epoch = 92, 120/235, loss = 85.51480, pos_mask = inf, neg_mask = inf
+Training @ epoch = 92, 180/235, loss = 87.52569, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.84
+***********sensitivity test set **********
+Accuracy: 98.76
+***********invariance test set **********
+Accuracy: 80.58
+
+Patience= -30, Time=37.02729, train_epoch_loss = 85.9672370423662, test_epoch_acc = 80.58
+                                                                                                    
+Training @ epoch = 93, 0/235, loss = 85.91975, pos_mask = inf, neg_mask = inf
+Training @ epoch = 93, 60/235, loss = 86.41640, pos_mask = inf, neg_mask = inf
+Training @ epoch = 93, 120/235, loss = 86.54399, pos_mask = inf, neg_mask = inf
+Training @ epoch = 93, 180/235, loss = 87.15060, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.98
+***********sensitivity test set **********
+Accuracy: 98.88
+***********invariance test set **********
+Accuracy: 83.36
+
+Patience= -31, Time=37.42628, train_epoch_loss = 85.96698230175262, test_epoch_acc = 83.36
+                                                                                                    
+Training @ epoch = 94, 0/235, loss = 83.71498, pos_mask = inf, neg_mask = inf
+Training @ epoch = 94, 60/235, loss = 86.58803, pos_mask = inf, neg_mask = inf
+Training @ epoch = 94, 120/235, loss = 86.27647, pos_mask = inf, neg_mask = inf
+Training @ epoch = 94, 180/235, loss = 85.32767, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 99.02
+***********sensitivity test set **********
+Accuracy: 98.87
+***********invariance test set **********
+Accuracy: 83.87
+
+Patience= -32, Time=37.82523, train_epoch_loss = 85.96530579911902, test_epoch_acc = 83.87
+                                                                                                    
+Training @ epoch = 95, 0/235, loss = 87.77084, pos_mask = inf, neg_mask = inf
+Training @ epoch = 95, 60/235, loss = 86.21609, pos_mask = inf, neg_mask = inf
+Training @ epoch = 95, 120/235, loss = 84.99976, pos_mask = inf, neg_mask = inf
+Training @ epoch = 95, 180/235, loss = 86.70123, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 99.0
+***********sensitivity test set **********
+Accuracy: 98.87
+***********invariance test set **********
+Accuracy: 83.69
+
+Patience= -33, Time=38.22525, train_epoch_loss = 85.96527060650764, test_epoch_acc = 83.69
+                                                                                                    
+Training @ epoch = 96, 0/235, loss = 87.04058, pos_mask = inf, neg_mask = inf
+Training @ epoch = 96, 60/235, loss = 86.57784, pos_mask = inf, neg_mask = inf
+Training @ epoch = 96, 120/235, loss = 86.26473, pos_mask = inf, neg_mask = inf
+Training @ epoch = 96, 180/235, loss = 86.05766, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.86
+***********invariance test set **********
+Accuracy: 82.64
+
+Patience= -34, Time=38.62584, train_epoch_loss = 85.96641534034242, test_epoch_acc = 82.64
+                                                                                                    
+Training @ epoch = 97, 0/235, loss = 85.94983, pos_mask = inf, neg_mask = inf
+Training @ epoch = 97, 60/235, loss = 86.45933, pos_mask = inf, neg_mask = inf
+Training @ epoch = 97, 120/235, loss = 87.34924, pos_mask = inf, neg_mask = inf
+Training @ epoch = 97, 180/235, loss = 87.01863, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.97
+***********sensitivity test set **********
+Accuracy: 98.85
+***********invariance test set **********
+Accuracy: 83.23
+
+Patience= -35, Time=39.02284, train_epoch_loss = 85.9646427885015, test_epoch_acc = 83.23
+                                                                                                    
+Training @ epoch = 98, 0/235, loss = 86.07000, pos_mask = inf, neg_mask = inf
+Training @ epoch = 98, 60/235, loss = 86.10275, pos_mask = inf, neg_mask = inf
+Training @ epoch = 98, 120/235, loss = 86.02426, pos_mask = inf, neg_mask = inf
+Training @ epoch = 98, 180/235, loss = 85.44046, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.99
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 83.12
+
+Patience= -36, Time=39.42068, train_epoch_loss = 85.96384252994619, test_epoch_acc = 83.12
+                                                                                                    
+Training @ epoch = 99, 0/235, loss = 85.54903, pos_mask = inf, neg_mask = inf
+Training @ epoch = 99, 60/235, loss = 85.92128, pos_mask = inf, neg_mask = inf
+Training @ epoch = 99, 120/235, loss = 86.57004, pos_mask = inf, neg_mask = inf
+Training @ epoch = 99, 180/235, loss = 86.18399, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.99
+***********sensitivity test set **********
+Accuracy: 98.84
+***********invariance test set **********
+Accuracy: 83.62
+
+Patience= -37, Time=39.81667, train_epoch_loss = 85.96358111767059, test_epoch_acc = 83.62
+                                                                                                    
+Training @ epoch = 100, 0/235, loss = 84.59115, pos_mask = inf, neg_mask = inf
+Training @ epoch = 100, 60/235, loss = 86.06493, pos_mask = inf, neg_mask = inf
+Training @ epoch = 100, 120/235, loss = 86.89394, pos_mask = inf, neg_mask = inf
+Training @ epoch = 100, 180/235, loss = 86.55788, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 99.0
+***********sensitivity test set **********
+Accuracy: 98.84
+***********invariance test set **********
+Accuracy: 83.15
+
+Patience= -38, Time=40.21311, train_epoch_loss = 85.96452422446393, test_epoch_acc = 83.15
+                                                                                                    
+Training @ epoch = 101, 0/235, loss = 85.63624, pos_mask = inf, neg_mask = inf
+Training @ epoch = 101, 60/235, loss = 85.84719, pos_mask = inf, neg_mask = inf
+Training @ epoch = 101, 120/235, loss = 85.10542, pos_mask = inf, neg_mask = inf
+Training @ epoch = 101, 180/235, loss = 86.93654, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.99
+***********sensitivity test set **********
+Accuracy: 98.85
+***********invariance test set **********
+Accuracy: 83.16
+
+Patience= -39, Time=40.61202, train_epoch_loss = 85.96399662748296, test_epoch_acc = 83.16
+                                                                                                    
+Training @ epoch = 102, 0/235, loss = 86.07613, pos_mask = inf, neg_mask = inf
+Training @ epoch = 102, 60/235, loss = 86.07901, pos_mask = inf, neg_mask = inf
+Training @ epoch = 102, 120/235, loss = 85.08787, pos_mask = inf, neg_mask = inf
+Training @ epoch = 102, 180/235, loss = 87.37090, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.98
+***********sensitivity test set **********
+Accuracy: 98.86
+***********invariance test set **********
+Accuracy: 82.62
+
+Patience= -40, Time=41.00857, train_epoch_loss = 85.96183164880631, test_epoch_acc = 82.62
+                                                                                                    
+Training @ epoch = 103, 0/235, loss = 85.45623, pos_mask = inf, neg_mask = inf
+Training @ epoch = 103, 60/235, loss = 87.12852, pos_mask = inf, neg_mask = inf
+Training @ epoch = 103, 120/235, loss = 86.59370, pos_mask = inf, neg_mask = inf
+Training @ epoch = 103, 180/235, loss = 85.51055, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.93
+***********sensitivity test set **********
+Accuracy: 98.87
+***********invariance test set **********
+Accuracy: 82.84
+
+Patience= -41, Time=41.40518, train_epoch_loss = 85.96225431726334, test_epoch_acc = 82.84
+                                                                                                    
+Training @ epoch = 104, 0/235, loss = 86.14648, pos_mask = inf, neg_mask = inf
+Training @ epoch = 104, 60/235, loss = 85.42013, pos_mask = inf, neg_mask = inf
+Training @ epoch = 104, 120/235, loss = 84.88374, pos_mask = inf, neg_mask = inf
+Training @ epoch = 104, 180/235, loss = 87.65807, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.94
+***********sensitivity test set **********
+Accuracy: 98.84
+***********invariance test set **********
+Accuracy: 82.67
+
+Patience= -42, Time=41.80703, train_epoch_loss = 85.96620577548413, test_epoch_acc = 82.67
+                                                                                                    
+Training @ epoch = 105, 0/235, loss = 87.34785, pos_mask = inf, neg_mask = inf
+Training @ epoch = 105, 60/235, loss = 86.07161, pos_mask = inf, neg_mask = inf
+Training @ epoch = 105, 120/235, loss = 85.51004, pos_mask = inf, neg_mask = inf
+Training @ epoch = 105, 180/235, loss = 86.78568, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.97
+***********sensitivity test set **********
+Accuracy: 98.84
+***********invariance test set **********
+Accuracy: 83.27
+
+Patience= -43, Time=42.20586, train_epoch_loss = 85.9614686032559, test_epoch_acc = 83.27
+                                                                                                    
+Training @ epoch = 106, 0/235, loss = 85.72217, pos_mask = inf, neg_mask = inf
+Training @ epoch = 106, 60/235, loss = 86.23934, pos_mask = inf, neg_mask = inf
+Training @ epoch = 106, 120/235, loss = 86.98798, pos_mask = inf, neg_mask = inf
+Training @ epoch = 106, 180/235, loss = 85.19714, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 99.0
+***********sensitivity test set **********
+Accuracy: 98.84
+***********invariance test set **********
+Accuracy: 83.04
+
+Patience= -44, Time=42.60314, train_epoch_loss = 85.9657339217815, test_epoch_acc = 83.04
+                                                                                                    
+Training @ epoch = 107, 0/235, loss = 87.02755, pos_mask = inf, neg_mask = inf
+Training @ epoch = 107, 60/235, loss = 85.34716, pos_mask = inf, neg_mask = inf
+Training @ epoch = 107, 120/235, loss = 86.31974, pos_mask = inf, neg_mask = inf
+Training @ epoch = 107, 180/235, loss = 86.30964, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.95
+***********sensitivity test set **********
+Accuracy: 98.84
+***********invariance test set **********
+Accuracy: 83.12
+
+Patience= -45, Time=43.00137, train_epoch_loss = 85.96547275299721, test_epoch_acc = 83.12
+                                                                                                    
+Training @ epoch = 108, 0/235, loss = 87.79862, pos_mask = inf, neg_mask = inf
+Training @ epoch = 108, 60/235, loss = 87.33568, pos_mask = inf, neg_mask = inf
+Training @ epoch = 108, 120/235, loss = 86.09047, pos_mask = inf, neg_mask = inf
+Training @ epoch = 108, 180/235, loss = 85.34826, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.94
+***********sensitivity test set **********
+Accuracy: 98.87
+***********invariance test set **********
+Accuracy: 82.73
+
+Patience= -46, Time=43.39813, train_epoch_loss = 85.96544583909055, test_epoch_acc = 82.73
+                                                                                                    
+Training @ epoch = 109, 0/235, loss = 87.23444, pos_mask = inf, neg_mask = inf
+Training @ epoch = 109, 60/235, loss = 86.24214, pos_mask = inf, neg_mask = inf
+Training @ epoch = 109, 120/235, loss = 85.90268, pos_mask = inf, neg_mask = inf
+Training @ epoch = 109, 180/235, loss = 84.69835, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.82
+***********invariance test set **********
+Accuracy: 82.12
+
+Patience= -47, Time=43.79681, train_epoch_loss = 85.96212669534886, test_epoch_acc = 82.12
+                                                                                                    
+Training @ epoch = 110, 0/235, loss = 86.37508, pos_mask = inf, neg_mask = inf
+Training @ epoch = 110, 60/235, loss = 86.17339, pos_mask = inf, neg_mask = inf
+Training @ epoch = 110, 120/235, loss = 87.54261, pos_mask = inf, neg_mask = inf
+Training @ epoch = 110, 180/235, loss = 86.96682, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.94
+***********sensitivity test set **********
+Accuracy: 98.84
+***********invariance test set **********
+Accuracy: 83.07
+
+Patience= -48, Time=44.19327, train_epoch_loss = 85.96411515905503, test_epoch_acc = 83.07
+                                                                                                    
+Training @ epoch = 111, 0/235, loss = 85.88397, pos_mask = inf, neg_mask = inf
+Training @ epoch = 111, 60/235, loss = 85.71042, pos_mask = inf, neg_mask = inf
+Training @ epoch = 111, 120/235, loss = 86.45477, pos_mask = inf, neg_mask = inf
+Training @ epoch = 111, 180/235, loss = 86.08028, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.94
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 83.51
+
+Patience= -49, Time=44.59094, train_epoch_loss = 85.96457290649414, test_epoch_acc = 83.51
+                                                                                                    
+Training @ epoch = 112, 0/235, loss = 86.59796, pos_mask = inf, neg_mask = inf
+Training @ epoch = 112, 60/235, loss = 83.90570, pos_mask = inf, neg_mask = inf
+Training @ epoch = 112, 120/235, loss = 85.87610, pos_mask = inf, neg_mask = inf
+Training @ epoch = 112, 180/235, loss = 85.39960, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.91
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 83.25
+
+Patience= -50, Time=44.98908, train_epoch_loss = 85.96410837376371, test_epoch_acc = 83.25
+                                                                                                    
+Training @ epoch = 113, 0/235, loss = 87.66286, pos_mask = inf, neg_mask = inf
+Training @ epoch = 113, 60/235, loss = 86.23499, pos_mask = inf, neg_mask = inf
+Training @ epoch = 113, 120/235, loss = 87.13331, pos_mask = inf, neg_mask = inf
+Training @ epoch = 113, 180/235, loss = 86.28825, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.93
+***********sensitivity test set **********
+Accuracy: 98.85
+***********invariance test set **********
+Accuracy: 83.01
+
+Patience= -51, Time=45.38544, train_epoch_loss = 85.9647855718085, test_epoch_acc = 83.01
+                                                                                                    
+Training @ epoch = 114, 0/235, loss = 86.13083, pos_mask = inf, neg_mask = inf
+Training @ epoch = 114, 60/235, loss = 87.23213, pos_mask = inf, neg_mask = inf
+Training @ epoch = 114, 120/235, loss = 85.28819, pos_mask = inf, neg_mask = inf
+Training @ epoch = 114, 180/235, loss = 86.67406, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.95
+***********sensitivity test set **********
+Accuracy: 98.87
+***********invariance test set **********
+Accuracy: 84.39
+
+Patience= -52, Time=45.78130, train_epoch_loss = 85.96416926282518, test_epoch_acc = 84.39
+                                                                                                    
+Training @ epoch = 115, 0/235, loss = 87.04814, pos_mask = inf, neg_mask = inf
+Training @ epoch = 115, 60/235, loss = 85.31076, pos_mask = inf, neg_mask = inf
+Training @ epoch = 115, 120/235, loss = 86.83009, pos_mask = inf, neg_mask = inf
+Training @ epoch = 115, 180/235, loss = 85.59554, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.92
+***********sensitivity test set **********
+Accuracy: 98.84
+***********invariance test set **********
+Accuracy: 81.59
+
+Patience= -53, Time=46.18015, train_epoch_loss = 85.98155804897877, test_epoch_acc = 81.59
+                                                                                                    
+Training @ epoch = 116, 0/235, loss = 87.06400, pos_mask = inf, neg_mask = inf
+Training @ epoch = 116, 60/235, loss = 86.69396, pos_mask = inf, neg_mask = inf
+Training @ epoch = 116, 120/235, loss = 85.27477, pos_mask = inf, neg_mask = inf
+Training @ epoch = 116, 180/235, loss = 87.28620, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.89
+***********sensitivity test set **********
+Accuracy: 98.73
+***********invariance test set **********
+Accuracy: 83.47
+
+Patience= -54, Time=46.57730, train_epoch_loss = 85.96811302672042, test_epoch_acc = 83.47
+                                                                                                    
+Training @ epoch = 117, 0/235, loss = 87.71806, pos_mask = inf, neg_mask = inf
+Training @ epoch = 117, 60/235, loss = 84.68270, pos_mask = inf, neg_mask = inf
+Training @ epoch = 117, 120/235, loss = 86.74882, pos_mask = inf, neg_mask = inf
+Training @ epoch = 117, 180/235, loss = 87.42052, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 99.0
+***********sensitivity test set **********
+Accuracy: 98.85
+***********invariance test set **********
+Accuracy: 84.64
+
+Patience= -55, Time=46.97496, train_epoch_loss = 85.96396395094851, test_epoch_acc = 84.64
+                                                                                                    
+Training @ epoch = 118, 0/235, loss = 86.06311, pos_mask = inf, neg_mask = inf
+Training @ epoch = 118, 60/235, loss = 85.77617, pos_mask = inf, neg_mask = inf
+Training @ epoch = 118, 120/235, loss = 86.94877, pos_mask = inf, neg_mask = inf
+Training @ epoch = 118, 180/235, loss = 85.51080, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.91
+***********sensitivity test set **********
+Accuracy: 98.79
+***********invariance test set **********
+Accuracy: 84.03
+
+Patience= -56, Time=47.37261, train_epoch_loss = 85.96339953808074, test_epoch_acc = 84.03
+                                                                                                    
+Training @ epoch = 119, 0/235, loss = 86.56574, pos_mask = inf, neg_mask = inf
+Training @ epoch = 119, 60/235, loss = 86.26543, pos_mask = inf, neg_mask = inf
+Training @ epoch = 119, 120/235, loss = 86.83091, pos_mask = inf, neg_mask = inf
+Training @ epoch = 119, 180/235, loss = 86.27283, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.98
+***********sensitivity test set **********
+Accuracy: 98.81
+***********invariance test set **********
+Accuracy: 84.03
+
+Patience= -57, Time=47.76953, train_epoch_loss = 85.96512456041701, test_epoch_acc = 84.03
+                                                                                                    
+Training @ epoch = 120, 0/235, loss = 86.74555, pos_mask = inf, neg_mask = inf
+Training @ epoch = 120, 60/235, loss = 86.87698, pos_mask = inf, neg_mask = inf
+Training @ epoch = 120, 120/235, loss = 85.47571, pos_mask = inf, neg_mask = inf
+Training @ epoch = 120, 180/235, loss = 85.13136, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.95
+***********sensitivity test set **********
+Accuracy: 98.84
+***********invariance test set **********
+Accuracy: 84.34
+
+Patience= -58, Time=48.16661, train_epoch_loss = 85.96454454787234, test_epoch_acc = 84.34
+                                                                                                    
+Training @ epoch = 121, 0/235, loss = 85.20473, pos_mask = inf, neg_mask = inf
+Training @ epoch = 121, 60/235, loss = 86.31976, pos_mask = inf, neg_mask = inf
+Training @ epoch = 121, 120/235, loss = 86.68781, pos_mask = inf, neg_mask = inf
+Training @ epoch = 121, 180/235, loss = 85.94913, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.95
+***********sensitivity test set **********
+Accuracy: 98.87
+***********invariance test set **********
+Accuracy: 83.67
+
+Patience= -59, Time=48.56483, train_epoch_loss = 85.96545376067466, test_epoch_acc = 83.67
+                                                                                                    
+Training @ epoch = 122, 0/235, loss = 85.01306, pos_mask = inf, neg_mask = inf
+Training @ epoch = 122, 60/235, loss = 86.82041, pos_mask = inf, neg_mask = inf
+Training @ epoch = 122, 120/235, loss = 84.42120, pos_mask = inf, neg_mask = inf
+Training @ epoch = 122, 180/235, loss = 87.28928, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.97
+***********sensitivity test set **********
+Accuracy: 98.85
+***********invariance test set **********
+Accuracy: 83.9
+
+Patience= -60, Time=48.96133, train_epoch_loss = 85.964639054968, test_epoch_acc = 83.9
+                                                                                                    
+Training @ epoch = 123, 0/235, loss = 87.30643, pos_mask = inf, neg_mask = inf
+Training @ epoch = 123, 60/235, loss = 85.78525, pos_mask = inf, neg_mask = inf
+Training @ epoch = 123, 120/235, loss = 85.87691, pos_mask = inf, neg_mask = inf
+Training @ epoch = 123, 180/235, loss = 84.33848, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.85
+***********invariance test set **********
+Accuracy: 83.92
+
+Patience= -61, Time=49.35980, train_epoch_loss = 85.96586646222053, test_epoch_acc = 83.92
+                                                                                                    
+Training @ epoch = 124, 0/235, loss = 85.61280, pos_mask = inf, neg_mask = inf
+Training @ epoch = 124, 60/235, loss = 88.11169, pos_mask = inf, neg_mask = inf
+Training @ epoch = 124, 120/235, loss = 84.73318, pos_mask = inf, neg_mask = inf
+Training @ epoch = 124, 180/235, loss = 84.76988, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.97
+***********sensitivity test set **********
+Accuracy: 98.85
+***********invariance test set **********
+Accuracy: 83.51
+
+Patience= -62, Time=49.75683, train_epoch_loss = 85.96534056967877, test_epoch_acc = 83.51
+                                                                                                    
+Training @ epoch = 125, 0/235, loss = 86.19240, pos_mask = inf, neg_mask = inf
+Training @ epoch = 125, 60/235, loss = 86.64243, pos_mask = inf, neg_mask = inf
+Training @ epoch = 125, 120/235, loss = 85.30093, pos_mask = inf, neg_mask = inf
+Training @ epoch = 125, 180/235, loss = 86.37812, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.93
+***********sensitivity test set **********
+Accuracy: 98.85
+***********invariance test set **********
+Accuracy: 83.17
+
+Patience= -63, Time=50.15387, train_epoch_loss = 85.96321678973258, test_epoch_acc = 83.17
+                                                                                                    
+Training @ epoch = 126, 0/235, loss = 85.54523, pos_mask = inf, neg_mask = inf
+Training @ epoch = 126, 60/235, loss = 84.75871, pos_mask = inf, neg_mask = inf
+Training @ epoch = 126, 120/235, loss = 84.58981, pos_mask = inf, neg_mask = inf
+Training @ epoch = 126, 180/235, loss = 84.83041, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.95
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 83.28
+
+Patience= -64, Time=50.55235, train_epoch_loss = 85.96241187237679, test_epoch_acc = 83.28
+                                                                                                    
+Training @ epoch = 127, 0/235, loss = 85.99892, pos_mask = inf, neg_mask = inf
+Training @ epoch = 127, 60/235, loss = 85.28510, pos_mask = inf, neg_mask = inf
+Training @ epoch = 127, 120/235, loss = 87.78956, pos_mask = inf, neg_mask = inf
+Training @ epoch = 127, 180/235, loss = 85.30980, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.81
+***********invariance test set **********
+Accuracy: 83.61
+
+Patience= -65, Time=50.94885, train_epoch_loss = 85.96598718521443, test_epoch_acc = 83.61
+                                                                                                    
+Training @ epoch = 128, 0/235, loss = 87.68905, pos_mask = inf, neg_mask = inf
+Training @ epoch = 128, 60/235, loss = 84.63482, pos_mask = inf, neg_mask = inf
+Training @ epoch = 128, 120/235, loss = 86.75084, pos_mask = inf, neg_mask = inf
+Training @ epoch = 128, 180/235, loss = 85.65276, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.95
+***********sensitivity test set **********
+Accuracy: 98.81
+***********invariance test set **********
+Accuracy: 84.02
+
+Patience= -66, Time=51.34551, train_epoch_loss = 85.96389897123296, test_epoch_acc = 84.02
+                                                                                                    
+Training @ epoch = 129, 0/235, loss = 85.50555, pos_mask = inf, neg_mask = inf
+Training @ epoch = 129, 60/235, loss = 85.65287, pos_mask = inf, neg_mask = inf
+Training @ epoch = 129, 120/235, loss = 85.89948, pos_mask = inf, neg_mask = inf
+Training @ epoch = 129, 180/235, loss = 85.41635, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 83.8
+
+Patience= -67, Time=51.74420, train_epoch_loss = 85.96291624028632, test_epoch_acc = 83.8
+                                                                                                    
+Training @ epoch = 130, 0/235, loss = 86.05508, pos_mask = inf, neg_mask = inf
+Training @ epoch = 130, 60/235, loss = 86.29907, pos_mask = inf, neg_mask = inf
+Training @ epoch = 130, 120/235, loss = 84.98021, pos_mask = inf, neg_mask = inf
+Training @ epoch = 130, 180/235, loss = 87.40746, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.8
+***********invariance test set **********
+Accuracy: 83.82
+
+Patience= -68, Time=52.14049, train_epoch_loss = 85.96580200195312, test_epoch_acc = 83.82
+                                                                                                    
+Training @ epoch = 131, 0/235, loss = 85.12618, pos_mask = inf, neg_mask = inf
+Training @ epoch = 131, 60/235, loss = 85.80419, pos_mask = inf, neg_mask = inf
+Training @ epoch = 131, 120/235, loss = 86.18095, pos_mask = inf, neg_mask = inf
+Training @ epoch = 131, 180/235, loss = 88.31565, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.93
+***********sensitivity test set **********
+Accuracy: 98.8
+***********invariance test set **********
+Accuracy: 83.65
+
+Patience= -69, Time=52.53664, train_epoch_loss = 85.96293727793592, test_epoch_acc = 83.65
+                                                                                                    
+Training @ epoch = 132, 0/235, loss = 86.36877, pos_mask = inf, neg_mask = inf
+Training @ epoch = 132, 60/235, loss = 87.05332, pos_mask = inf, neg_mask = inf
+Training @ epoch = 132, 120/235, loss = 85.34707, pos_mask = inf, neg_mask = inf
+Training @ epoch = 132, 180/235, loss = 86.00905, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.98
+***********sensitivity test set **********
+Accuracy: 98.82
+***********invariance test set **********
+Accuracy: 83.8
+
+Patience= -70, Time=52.93475, train_epoch_loss = 85.96483373439058, test_epoch_acc = 83.8
+                                                                                                    
+Training @ epoch = 133, 0/235, loss = 87.82107, pos_mask = inf, neg_mask = inf
+Training @ epoch = 133, 60/235, loss = 86.07497, pos_mask = inf, neg_mask = inf
+Training @ epoch = 133, 120/235, loss = 85.32820, pos_mask = inf, neg_mask = inf
+Training @ epoch = 133, 180/235, loss = 86.57922, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.93
+***********sensitivity test set **********
+Accuracy: 98.81
+***********invariance test set **********
+Accuracy: 83.77
+
+Patience= -71, Time=53.33164, train_epoch_loss = 85.96452880210065, test_epoch_acc = 83.77
+                                                                                                    
+Training @ epoch = 134, 0/235, loss = 86.10263, pos_mask = inf, neg_mask = inf
+Training @ epoch = 134, 60/235, loss = 85.78832, pos_mask = inf, neg_mask = inf
+Training @ epoch = 134, 120/235, loss = 86.41116, pos_mask = inf, neg_mask = inf
+Training @ epoch = 134, 180/235, loss = 84.45529, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.97
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 83.76
+
+Patience= -72, Time=53.72992, train_epoch_loss = 85.96425024803649, test_epoch_acc = 83.76
+                                                                                                    
+Training @ epoch = 135, 0/235, loss = 85.69850, pos_mask = inf, neg_mask = inf
+Training @ epoch = 135, 60/235, loss = 86.51979, pos_mask = inf, neg_mask = inf
+Training @ epoch = 135, 120/235, loss = 86.43382, pos_mask = inf, neg_mask = inf
+Training @ epoch = 135, 180/235, loss = 86.70516, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.95
+***********sensitivity test set **********
+Accuracy: 98.8
+***********invariance test set **********
+Accuracy: 83.46
+
+Patience= -73, Time=54.12810, train_epoch_loss = 85.96181325709566, test_epoch_acc = 83.46
+                                                                                                    
+Training @ epoch = 136, 0/235, loss = 86.33160, pos_mask = inf, neg_mask = inf
+Training @ epoch = 136, 60/235, loss = 86.63824, pos_mask = inf, neg_mask = inf
+Training @ epoch = 136, 120/235, loss = 86.36862, pos_mask = inf, neg_mask = inf
+Training @ epoch = 136, 180/235, loss = 86.08376, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.98
+***********sensitivity test set **********
+Accuracy: 98.82
+***********invariance test set **********
+Accuracy: 83.73
+
+Patience= -74, Time=54.52541, train_epoch_loss = 85.96254916901285, test_epoch_acc = 83.73
+                                                                                                    
+Training @ epoch = 137, 0/235, loss = 87.00980, pos_mask = inf, neg_mask = inf
+Training @ epoch = 137, 60/235, loss = 87.06009, pos_mask = inf, neg_mask = inf
+Training @ epoch = 137, 120/235, loss = 87.81709, pos_mask = inf, neg_mask = inf
+Training @ epoch = 137, 180/235, loss = 85.63160, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.86
+***********invariance test set **********
+Accuracy: 83.57
+
+Patience= -75, Time=54.92435, train_epoch_loss = 85.96302100648272, test_epoch_acc = 83.57
+                                                                                                    
+Training @ epoch = 138, 0/235, loss = 85.95489, pos_mask = inf, neg_mask = inf
+Training @ epoch = 138, 60/235, loss = 86.15126, pos_mask = inf, neg_mask = inf
+Training @ epoch = 138, 120/235, loss = 87.42376, pos_mask = inf, neg_mask = inf
+Training @ epoch = 138, 180/235, loss = 85.42654, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.93
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 83.8
+
+Patience= -76, Time=55.32030, train_epoch_loss = 85.96476278102145, test_epoch_acc = 83.8
+                                                                                                    
+Training @ epoch = 139, 0/235, loss = 86.74134, pos_mask = inf, neg_mask = inf
+Training @ epoch = 139, 60/235, loss = 86.33482, pos_mask = inf, neg_mask = inf
+Training @ epoch = 139, 120/235, loss = 86.94485, pos_mask = inf, neg_mask = inf
+Training @ epoch = 139, 180/235, loss = 85.43092, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.95
+***********sensitivity test set **********
+Accuracy: 98.82
+***********invariance test set **********
+Accuracy: 83.8
+
+Patience= -77, Time=55.71705, train_epoch_loss = 85.96438260991522, test_epoch_acc = 83.8
+                                                                                                    
+Training @ epoch = 140, 0/235, loss = 85.89959, pos_mask = inf, neg_mask = inf
+Training @ epoch = 140, 60/235, loss = 86.77293, pos_mask = inf, neg_mask = inf
+Training @ epoch = 140, 120/235, loss = 86.51381, pos_mask = inf, neg_mask = inf
+Training @ epoch = 140, 180/235, loss = 85.32143, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.94
+***********sensitivity test set **********
+Accuracy: 98.86
+***********invariance test set **********
+Accuracy: 83.75
+
+Patience= -78, Time=56.11634, train_epoch_loss = 85.96453297391851, test_epoch_acc = 83.75
+                                                                                                    
+Training @ epoch = 141, 0/235, loss = 85.59388, pos_mask = inf, neg_mask = inf
+Training @ epoch = 141, 60/235, loss = 85.90941, pos_mask = inf, neg_mask = inf
+Training @ epoch = 141, 120/235, loss = 86.30424, pos_mask = inf, neg_mask = inf
+Training @ epoch = 141, 180/235, loss = 85.64493, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.93
+***********sensitivity test set **********
+Accuracy: 98.85
+***********invariance test set **********
+Accuracy: 83.77
+
+Patience= -79, Time=56.51308, train_epoch_loss = 85.96440840376184, test_epoch_acc = 83.77
+                                                                                                    
+Training @ epoch = 142, 0/235, loss = 85.86691, pos_mask = inf, neg_mask = inf
+Training @ epoch = 142, 60/235, loss = 86.47974, pos_mask = inf, neg_mask = inf
+Training @ epoch = 142, 120/235, loss = 86.80838, pos_mask = inf, neg_mask = inf
+Training @ epoch = 142, 180/235, loss = 87.42437, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.94
+***********sensitivity test set **********
+Accuracy: 98.81
+***********invariance test set **********
+Accuracy: 83.67
+
+Patience= -80, Time=56.90933, train_epoch_loss = 85.9634898571258, test_epoch_acc = 83.67
+                                                                                                    
+Training @ epoch = 143, 0/235, loss = 85.68491, pos_mask = inf, neg_mask = inf
+Training @ epoch = 143, 60/235, loss = 87.83973, pos_mask = inf, neg_mask = inf
+Training @ epoch = 143, 120/235, loss = 84.97411, pos_mask = inf, neg_mask = inf
+Training @ epoch = 143, 180/235, loss = 86.18733, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.95
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 83.01
+
+Patience= -81, Time=57.30753, train_epoch_loss = 85.96115209701213, test_epoch_acc = 83.01
+                                                                                                    
+Training @ epoch = 144, 0/235, loss = 85.04760, pos_mask = inf, neg_mask = inf
+Training @ epoch = 144, 60/235, loss = 86.97289, pos_mask = inf, neg_mask = inf
+Training @ epoch = 144, 120/235, loss = 85.50256, pos_mask = inf, neg_mask = inf
+Training @ epoch = 144, 180/235, loss = 86.52598, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.94
+***********sensitivity test set **********
+Accuracy: 98.81
+***********invariance test set **********
+Accuracy: 83.99
+
+Patience= -82, Time=57.70558, train_epoch_loss = 85.96086932243185, test_epoch_acc = 83.99
+                                                                                                    
+Training @ epoch = 145, 0/235, loss = 85.26331, pos_mask = inf, neg_mask = inf
+Training @ epoch = 145, 60/235, loss = 84.88954, pos_mask = inf, neg_mask = inf
+Training @ epoch = 145, 120/235, loss = 86.28528, pos_mask = inf, neg_mask = inf
+Training @ epoch = 145, 180/235, loss = 86.33646, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.86
+***********invariance test set **********
+Accuracy: 83.69
+
+Patience= -83, Time=58.10398, train_epoch_loss = 85.96444411582135, test_epoch_acc = 83.69
+                                                                                                    
+Training @ epoch = 146, 0/235, loss = 87.02589, pos_mask = inf, neg_mask = inf
+Training @ epoch = 146, 60/235, loss = 85.93691, pos_mask = inf, neg_mask = inf
+Training @ epoch = 146, 120/235, loss = 86.70261, pos_mask = inf, neg_mask = inf
+Training @ epoch = 146, 180/235, loss = 84.98914, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.84
+***********invariance test set **********
+Accuracy: 83.56
+
+Patience= -84, Time=58.50359, train_epoch_loss = 85.96177905468231, test_epoch_acc = 83.56
+                                                                                                    
+Training @ epoch = 147, 0/235, loss = 86.22559, pos_mask = inf, neg_mask = inf
+Training @ epoch = 147, 60/235, loss = 84.89505, pos_mask = inf, neg_mask = inf
+Training @ epoch = 147, 120/235, loss = 86.91391, pos_mask = inf, neg_mask = inf
+Training @ epoch = 147, 180/235, loss = 84.29764, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.93
+***********sensitivity test set **********
+Accuracy: 98.9
+***********invariance test set **********
+Accuracy: 83.14
+
+Patience= -85, Time=58.90039, train_epoch_loss = 85.9622890878231, test_epoch_acc = 83.14
+                                                                                                    
+Training @ epoch = 148, 0/235, loss = 85.15399, pos_mask = inf, neg_mask = inf
+Training @ epoch = 148, 60/235, loss = 85.83556, pos_mask = inf, neg_mask = inf
+Training @ epoch = 148, 120/235, loss = 87.54037, pos_mask = inf, neg_mask = inf
+Training @ epoch = 148, 180/235, loss = 86.98469, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.98
+***********sensitivity test set **********
+Accuracy: 98.85
+***********invariance test set **********
+Accuracy: 83.66
+
+Patience= -86, Time=59.29752, train_epoch_loss = 85.96265262035614, test_epoch_acc = 83.66
+                                                                                                    
+Training @ epoch = 149, 0/235, loss = 85.84981, pos_mask = inf, neg_mask = inf
+Training @ epoch = 149, 60/235, loss = 86.10906, pos_mask = inf, neg_mask = inf
+Training @ epoch = 149, 120/235, loss = 87.13282, pos_mask = inf, neg_mask = inf
+Training @ epoch = 149, 180/235, loss = 86.66213, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.87
+***********sensitivity test set **********
+Accuracy: 98.83
+***********invariance test set **********
+Accuracy: 84.42
+
+Patience= -87, Time=59.69719, train_epoch_loss = 85.97806685427402, test_epoch_acc = 84.42
+                                                                                                    
+Training @ epoch = 150, 0/235, loss = 85.93115, pos_mask = inf, neg_mask = inf
+Training @ epoch = 150, 60/235, loss = 86.06975, pos_mask = inf, neg_mask = inf
+Training @ epoch = 150, 120/235, loss = 86.17640, pos_mask = inf, neg_mask = inf
+Training @ epoch = 150, 180/235, loss = 87.52761, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.98
+***********sensitivity test set **********
+Accuracy: 98.92
+***********invariance test set **********
+Accuracy: 83.68
+
+Patience= -88, Time=60.09334, train_epoch_loss = 85.96781471739423, test_epoch_acc = 83.68
+                                                                                                    
+Training @ epoch = 151, 0/235, loss = 85.37829, pos_mask = inf, neg_mask = inf
+Training @ epoch = 151, 60/235, loss = 85.89835, pos_mask = inf, neg_mask = inf
+Training @ epoch = 151, 120/235, loss = 86.53120, pos_mask = inf, neg_mask = inf
+Training @ epoch = 151, 180/235, loss = 85.57536, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.97
+***********sensitivity test set **********
+Accuracy: 98.9
+***********invariance test set **********
+Accuracy: 84.18
+
+Patience= -89, Time=60.49209, train_epoch_loss = 85.96392661561357, test_epoch_acc = 84.18
+                                                                                                    
+Training @ epoch = 152, 0/235, loss = 86.07972, pos_mask = inf, neg_mask = inf
+Training @ epoch = 152, 60/235, loss = 85.83332, pos_mask = inf, neg_mask = inf
+Training @ epoch = 152, 120/235, loss = 86.87547, pos_mask = inf, neg_mask = inf
+Training @ epoch = 152, 180/235, loss = 86.03037, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.93
+***********invariance test set **********
+Accuracy: 84.18
+
+Patience= -90, Time=60.89011, train_epoch_loss = 85.96401785992562, test_epoch_acc = 84.18
+                                                                                                    
+Training @ epoch = 153, 0/235, loss = 86.11084, pos_mask = inf, neg_mask = inf
+Training @ epoch = 153, 60/235, loss = 85.92519, pos_mask = inf, neg_mask = inf
+Training @ epoch = 153, 120/235, loss = 84.82253, pos_mask = inf, neg_mask = inf
+Training @ epoch = 153, 180/235, loss = 86.52428, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.95
+***********sensitivity test set **********
+Accuracy: 98.92
+***********invariance test set **********
+Accuracy: 84.22
+
+Patience= -91, Time=61.28652, train_epoch_loss = 85.962923463862, test_epoch_acc = 84.22
+                                                                                                    
+Training @ epoch = 154, 0/235, loss = 86.26236, pos_mask = inf, neg_mask = inf
+Training @ epoch = 154, 60/235, loss = 85.80657, pos_mask = inf, neg_mask = inf
+Training @ epoch = 154, 120/235, loss = 86.43499, pos_mask = inf, neg_mask = inf
+Training @ epoch = 154, 180/235, loss = 85.84228, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.95
+***********sensitivity test set **********
+Accuracy: 98.91
+***********invariance test set **********
+Accuracy: 84.08
+
+Patience= -92, Time=61.68488, train_epoch_loss = 85.96144118613385, test_epoch_acc = 84.08
+                                                                                                    
+Training @ epoch = 155, 0/235, loss = 87.49922, pos_mask = inf, neg_mask = inf
+Training @ epoch = 155, 60/235, loss = 87.11060, pos_mask = inf, neg_mask = inf
+Training @ epoch = 155, 120/235, loss = 85.94587, pos_mask = inf, neg_mask = inf
+Training @ epoch = 155, 180/235, loss = 84.70139, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.94
+***********invariance test set **********
+Accuracy: 84.31
+
+Patience= -93, Time=62.08122, train_epoch_loss = 85.96223548726833, test_epoch_acc = 84.31
+                                                                                                    
+Training @ epoch = 156, 0/235, loss = 85.35902, pos_mask = inf, neg_mask = inf
+Training @ epoch = 156, 60/235, loss = 86.98321, pos_mask = inf, neg_mask = inf
+Training @ epoch = 156, 120/235, loss = 85.95085, pos_mask = inf, neg_mask = inf
+Training @ epoch = 156, 180/235, loss = 86.33743, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.93
+***********invariance test set **********
+Accuracy: 84.08
+
+Patience= -94, Time=62.47771, train_epoch_loss = 85.96350907670691, test_epoch_acc = 84.08
+                                                                                                    
+Training @ epoch = 157, 0/235, loss = 85.93296, pos_mask = inf, neg_mask = inf
+Training @ epoch = 157, 60/235, loss = 86.02655, pos_mask = inf, neg_mask = inf
+Training @ epoch = 157, 120/235, loss = 85.12923, pos_mask = inf, neg_mask = inf
+Training @ epoch = 157, 180/235, loss = 86.94926, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.97
+***********sensitivity test set **********
+Accuracy: 98.91
+***********invariance test set **********
+Accuracy: 84.0
+
+Patience= -95, Time=62.87558, train_epoch_loss = 85.96460908930352, test_epoch_acc = 84.0
+                                                                                                    
+Training @ epoch = 158, 0/235, loss = 86.27378, pos_mask = inf, neg_mask = inf
+Training @ epoch = 158, 60/235, loss = 85.07332, pos_mask = inf, neg_mask = inf
+Training @ epoch = 158, 120/235, loss = 87.18345, pos_mask = inf, neg_mask = inf
+Training @ epoch = 158, 180/235, loss = 85.79564, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.92
+***********invariance test set **********
+Accuracy: 84.13
+
+Patience= -96, Time=63.27257, train_epoch_loss = 85.96465489813622, test_epoch_acc = 84.13
+                                                                                                    
+Training @ epoch = 159, 0/235, loss = 85.55605, pos_mask = inf, neg_mask = inf
+Training @ epoch = 159, 60/235, loss = 85.23110, pos_mask = inf, neg_mask = inf
+Training @ epoch = 159, 120/235, loss = 86.33497, pos_mask = inf, neg_mask = inf
+Training @ epoch = 159, 180/235, loss = 85.05665, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.9
+***********invariance test set **********
+Accuracy: 84.08
+
+Patience= -97, Time=63.66864, train_epoch_loss = 85.96176731840093, test_epoch_acc = 84.08
+                                                                                                    
+Training @ epoch = 160, 0/235, loss = 85.80991, pos_mask = inf, neg_mask = inf
+Training @ epoch = 160, 60/235, loss = 84.33455, pos_mask = inf, neg_mask = inf
+Training @ epoch = 160, 120/235, loss = 86.97939, pos_mask = inf, neg_mask = inf
+Training @ epoch = 160, 180/235, loss = 86.23467, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.98
+***********sensitivity test set **********
+Accuracy: 98.89
+***********invariance test set **********
+Accuracy: 83.98
+
+Patience= -98, Time=64.06734, train_epoch_loss = 85.9629845477165, test_epoch_acc = 83.98
+                                                                                                    
+Training @ epoch = 161, 0/235, loss = 87.69209, pos_mask = inf, neg_mask = inf
+Training @ epoch = 161, 60/235, loss = 86.78956, pos_mask = inf, neg_mask = inf
+Training @ epoch = 161, 120/235, loss = 86.39832, pos_mask = inf, neg_mask = inf
+Training @ epoch = 161, 180/235, loss = 85.77036, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.97
+***********sensitivity test set **********
+Accuracy: 98.88
+***********invariance test set **********
+Accuracy: 84.21
+
+Patience= -99, Time=64.46546, train_epoch_loss = 85.96533138193983, test_epoch_acc = 84.21
+                                                                                                    
+Training @ epoch = 162, 0/235, loss = 86.80767, pos_mask = inf, neg_mask = inf
+Training @ epoch = 162, 60/235, loss = 85.40519, pos_mask = inf, neg_mask = inf
+Training @ epoch = 162, 120/235, loss = 85.17247, pos_mask = inf, neg_mask = inf
+Training @ epoch = 162, 180/235, loss = 85.49738, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.89
+***********invariance test set **********
+Accuracy: 83.94
+
+Patience= -100, Time=64.86304, train_epoch_loss = 85.96358653941053, test_epoch_acc = 83.94
+                                                                                                    
+Training @ epoch = 163, 0/235, loss = 85.11079, pos_mask = inf, neg_mask = inf
+Training @ epoch = 163, 60/235, loss = 87.95796, pos_mask = inf, neg_mask = inf
+Training @ epoch = 163, 120/235, loss = 87.33347, pos_mask = inf, neg_mask = inf
+Training @ epoch = 163, 180/235, loss = 86.68668, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.97
+***********sensitivity test set **********
+Accuracy: 98.87
+***********invariance test set **********
+Accuracy: 84.08
+
+Patience= -101, Time=65.26111, train_epoch_loss = 85.96250258100794, test_epoch_acc = 84.08
+                                                                                                    
+Training @ epoch = 164, 0/235, loss = 86.07843, pos_mask = inf, neg_mask = inf
+Training @ epoch = 164, 60/235, loss = 86.56590, pos_mask = inf, neg_mask = inf
+Training @ epoch = 164, 120/235, loss = 85.15302, pos_mask = inf, neg_mask = inf
+Training @ epoch = 164, 180/235, loss = 85.49533, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.88
+***********invariance test set **********
+Accuracy: 84.26
+
+Patience= -102, Time=65.65754, train_epoch_loss = 85.96378902678794, test_epoch_acc = 84.26
+                                                                                                    
+Training @ epoch = 165, 0/235, loss = 85.95427, pos_mask = inf, neg_mask = inf
+Training @ epoch = 165, 60/235, loss = 86.36396, pos_mask = inf, neg_mask = inf
+Training @ epoch = 165, 120/235, loss = 86.54833, pos_mask = inf, neg_mask = inf
+Training @ epoch = 165, 180/235, loss = 87.28445, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.87
+***********invariance test set **********
+Accuracy: 83.95
+
+Patience= -103, Time=66.05361, train_epoch_loss = 85.96385037036653, test_epoch_acc = 83.95
+                                                                                                    
+Training @ epoch = 166, 0/235, loss = 84.96242, pos_mask = inf, neg_mask = inf
+Training @ epoch = 166, 60/235, loss = 86.30041, pos_mask = inf, neg_mask = inf
+Training @ epoch = 166, 120/235, loss = 84.80108, pos_mask = inf, neg_mask = inf
+Training @ epoch = 166, 180/235, loss = 84.80452, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.95
+***********sensitivity test set **********
+Accuracy: 98.88
+***********invariance test set **********
+Accuracy: 83.99
+
+Patience= -104, Time=66.45243, train_epoch_loss = 85.96362825758914, test_epoch_acc = 83.99
+                                                                                                    
+Training @ epoch = 167, 0/235, loss = 87.33234, pos_mask = inf, neg_mask = inf
+Training @ epoch = 167, 60/235, loss = 85.35789, pos_mask = inf, neg_mask = inf
+Training @ epoch = 167, 120/235, loss = 86.06774, pos_mask = inf, neg_mask = inf
+Training @ epoch = 167, 180/235, loss = 86.43781, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.91
+***********invariance test set **********
+Accuracy: 83.96
+
+Patience= -105, Time=66.84899, train_epoch_loss = 85.96402920662089, test_epoch_acc = 83.96
+                                                                                                    
+Training @ epoch = 168, 0/235, loss = 86.80837, pos_mask = inf, neg_mask = inf
+Training @ epoch = 168, 60/235, loss = 85.43273, pos_mask = inf, neg_mask = inf
+Training @ epoch = 168, 120/235, loss = 85.85690, pos_mask = inf, neg_mask = inf
+Training @ epoch = 168, 180/235, loss = 85.78485, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.91
+***********invariance test set **********
+Accuracy: 84.19
+
+Patience= -106, Time=67.24904, train_epoch_loss = 85.96337306245844, test_epoch_acc = 84.19
+                                                                                                    
+Training @ epoch = 169, 0/235, loss = 85.81784, pos_mask = inf, neg_mask = inf
+Training @ epoch = 169, 60/235, loss = 86.48374, pos_mask = inf, neg_mask = inf
+Training @ epoch = 169, 120/235, loss = 87.85303, pos_mask = inf, neg_mask = inf
+Training @ epoch = 169, 180/235, loss = 84.52196, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.97
+***********sensitivity test set **********
+Accuracy: 98.92
+***********invariance test set **********
+Accuracy: 83.89
+
+Patience= -107, Time=67.64540, train_epoch_loss = 85.96293862525452, test_epoch_acc = 83.89
+                                                                                                    
+Training @ epoch = 170, 0/235, loss = 86.21030, pos_mask = inf, neg_mask = inf
+Training @ epoch = 170, 60/235, loss = 85.86988, pos_mask = inf, neg_mask = inf
+Training @ epoch = 170, 120/235, loss = 86.43314, pos_mask = inf, neg_mask = inf
+Training @ epoch = 170, 180/235, loss = 86.79592, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.99
+***********sensitivity test set **********
+Accuracy: 98.89
+***********invariance test set **********
+Accuracy: 83.98
+
+Patience= -108, Time=68.04199, train_epoch_loss = 85.96255001311607, test_epoch_acc = 83.98
+                                                                                                    
+Training @ epoch = 171, 0/235, loss = 86.33503, pos_mask = inf, neg_mask = inf
+Training @ epoch = 171, 60/235, loss = 87.02786, pos_mask = inf, neg_mask = inf
+Training @ epoch = 171, 120/235, loss = 84.96777, pos_mask = inf, neg_mask = inf
+Training @ epoch = 171, 180/235, loss = 86.82422, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.9
+***********invariance test set **********
+Accuracy: 83.86
+
+Patience= -109, Time=68.44147, train_epoch_loss = 85.96517476832614, test_epoch_acc = 83.86
+                                                                                                    
+Training @ epoch = 172, 0/235, loss = 86.02216, pos_mask = inf, neg_mask = inf
+Training @ epoch = 172, 60/235, loss = 86.48108, pos_mask = inf, neg_mask = inf
+Training @ epoch = 172, 120/235, loss = 85.58895, pos_mask = inf, neg_mask = inf
+Training @ epoch = 172, 180/235, loss = 86.86505, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.9
+***********invariance test set **********
+Accuracy: 84.08
+
+Patience= -110, Time=68.83795, train_epoch_loss = 85.96173212578957, test_epoch_acc = 84.08
+                                                                                                    
+Training @ epoch = 173, 0/235, loss = 86.10251, pos_mask = inf, neg_mask = inf
+Training @ epoch = 173, 60/235, loss = 86.03564, pos_mask = inf, neg_mask = inf
+Training @ epoch = 173, 120/235, loss = 86.92383, pos_mask = inf, neg_mask = inf
+Training @ epoch = 173, 180/235, loss = 87.06026, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.97
+***********sensitivity test set **********
+Accuracy: 98.89
+***********invariance test set **********
+Accuracy: 84.17
+
+Patience= -111, Time=69.23470, train_epoch_loss = 85.96040800378678, test_epoch_acc = 84.17
+                                                                                                    
+Training @ epoch = 174, 0/235, loss = 87.21571, pos_mask = inf, neg_mask = inf
+Training @ epoch = 174, 60/235, loss = 86.93173, pos_mask = inf, neg_mask = inf
+Training @ epoch = 174, 120/235, loss = 85.86118, pos_mask = inf, neg_mask = inf
+Training @ epoch = 174, 180/235, loss = 85.40326, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.87
+***********invariance test set **********
+Accuracy: 83.99
+
+Patience= -112, Time=69.63365, train_epoch_loss = 85.96449907992748, test_epoch_acc = 83.99
+                                                                                                    
+Training @ epoch = 175, 0/235, loss = 85.63878, pos_mask = inf, neg_mask = inf
+Training @ epoch = 175, 60/235, loss = 85.71922, pos_mask = inf, neg_mask = inf
+Training @ epoch = 175, 120/235, loss = 86.79957, pos_mask = inf, neg_mask = inf
+Training @ epoch = 175, 180/235, loss = 85.07634, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 99.0
+***********sensitivity test set **********
+Accuracy: 98.89
+***********invariance test set **********
+Accuracy: 83.72
+
+Patience= -113, Time=70.03075, train_epoch_loss = 85.96129539976728, test_epoch_acc = 83.72
+                                                                                                    
+Training @ epoch = 176, 0/235, loss = 84.48917, pos_mask = inf, neg_mask = inf
+Training @ epoch = 176, 60/235, loss = 86.90348, pos_mask = inf, neg_mask = inf
+Training @ epoch = 176, 120/235, loss = 86.45655, pos_mask = inf, neg_mask = inf
+Training @ epoch = 176, 180/235, loss = 85.14480, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.99
+***********sensitivity test set **********
+Accuracy: 98.88
+***********invariance test set **********
+Accuracy: 83.67
+
+Patience= -114, Time=70.42711, train_epoch_loss = 85.9629707985736, test_epoch_acc = 83.67
+                                                                                                    
+Training @ epoch = 177, 0/235, loss = 86.02802, pos_mask = inf, neg_mask = inf
+Training @ epoch = 177, 60/235, loss = 85.86359, pos_mask = inf, neg_mask = inf
+Training @ epoch = 177, 120/235, loss = 85.73520, pos_mask = inf, neg_mask = inf
+Training @ epoch = 177, 180/235, loss = 84.52599, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 99.01
+***********sensitivity test set **********
+Accuracy: 98.91
+***********invariance test set **********
+Accuracy: 83.81
+
+Patience= -115, Time=70.82536, train_epoch_loss = 85.96265068865837, test_epoch_acc = 83.81
+                                                                                                    
+Training @ epoch = 178, 0/235, loss = 84.23398, pos_mask = inf, neg_mask = inf
+Training @ epoch = 178, 60/235, loss = 86.80582, pos_mask = inf, neg_mask = inf
+Training @ epoch = 178, 120/235, loss = 86.73531, pos_mask = inf, neg_mask = inf
+Training @ epoch = 178, 180/235, loss = 85.46540, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 99.0
+***********sensitivity test set **********
+Accuracy: 98.9
+***********invariance test set **********
+Accuracy: 83.65
+
+Patience= -116, Time=71.22129, train_epoch_loss = 85.96367096596576, test_epoch_acc = 83.65
+                                                                                                    
+Training @ epoch = 179, 0/235, loss = 86.35396, pos_mask = inf, neg_mask = inf
+Training @ epoch = 179, 60/235, loss = 85.77176, pos_mask = inf, neg_mask = inf
+Training @ epoch = 179, 120/235, loss = 85.85693, pos_mask = inf, neg_mask = inf
+Training @ epoch = 179, 180/235, loss = 87.22016, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.99
+***********sensitivity test set **********
+Accuracy: 98.88
+***********invariance test set **********
+Accuracy: 83.74
+
+Patience= -117, Time=71.61766, train_epoch_loss = 85.96248428669382, test_epoch_acc = 83.74
+                                                                                                    
+Training @ epoch = 180, 0/235, loss = 86.08573, pos_mask = inf, neg_mask = inf
+Training @ epoch = 180, 60/235, loss = 84.63309, pos_mask = inf, neg_mask = inf
+Training @ epoch = 180, 120/235, loss = 85.53431, pos_mask = inf, neg_mask = inf
+Training @ epoch = 180, 180/235, loss = 85.73440, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 99.01
+***********sensitivity test set **********
+Accuracy: 98.9
+***********invariance test set **********
+Accuracy: 83.93
+
+Patience= -118, Time=72.01647, train_epoch_loss = 85.96044288797582, test_epoch_acc = 83.93
+                                                                                                    
+Training @ epoch = 181, 0/235, loss = 86.79643, pos_mask = inf, neg_mask = inf
+Training @ epoch = 181, 60/235, loss = 85.44157, pos_mask = inf, neg_mask = inf
+Training @ epoch = 181, 120/235, loss = 86.31384, pos_mask = inf, neg_mask = inf
+Training @ epoch = 181, 180/235, loss = 85.38776, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 99.0
+***********sensitivity test set **********
+Accuracy: 98.91
+***********invariance test set **********
+Accuracy: 83.56
+
+Patience= -119, Time=72.41280, train_epoch_loss = 85.96272756698284, test_epoch_acc = 83.56
+                                                                                                    
+Training @ epoch = 182, 0/235, loss = 85.89158, pos_mask = inf, neg_mask = inf
+Training @ epoch = 182, 60/235, loss = 85.94351, pos_mask = inf, neg_mask = inf
+Training @ epoch = 182, 120/235, loss = 86.61832, pos_mask = inf, neg_mask = inf
+Training @ epoch = 182, 180/235, loss = 86.16993, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 99.0
+***********sensitivity test set **********
+Accuracy: 98.91
+***********invariance test set **********
+Accuracy: 83.9
+
+Patience= -120, Time=72.81117, train_epoch_loss = 85.96105646985643, test_epoch_acc = 83.9
+                                                                                                    
+Training @ epoch = 183, 0/235, loss = 85.51931, pos_mask = inf, neg_mask = inf
+Training @ epoch = 183, 60/235, loss = 85.04485, pos_mask = inf, neg_mask = inf
+Training @ epoch = 183, 120/235, loss = 85.89677, pos_mask = inf, neg_mask = inf
+Training @ epoch = 183, 180/235, loss = 85.97613, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 99.02
+***********sensitivity test set **********
+Accuracy: 98.9
+***********invariance test set **********
+Accuracy: 84.19
+
+Patience= -121, Time=73.20786, train_epoch_loss = 85.96376826509517, test_epoch_acc = 84.19
+                                                                                                    
+Training @ epoch = 184, 0/235, loss = 86.69138, pos_mask = inf, neg_mask = inf
+Training @ epoch = 184, 60/235, loss = 85.29604, pos_mask = inf, neg_mask = inf
+Training @ epoch = 184, 120/235, loss = 86.24023, pos_mask = inf, neg_mask = inf
+Training @ epoch = 184, 180/235, loss = 85.68166, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.99
+***********sensitivity test set **********
+Accuracy: 98.89
+***********invariance test set **********
+Accuracy: 83.57
+
+Patience= -122, Time=73.60602, train_epoch_loss = 85.9617164774144, test_epoch_acc = 83.57
+                                                                                                    
+Training @ epoch = 185, 0/235, loss = 86.26920, pos_mask = inf, neg_mask = inf
+Training @ epoch = 185, 60/235, loss = 85.58032, pos_mask = inf, neg_mask = inf
+Training @ epoch = 185, 120/235, loss = 86.05379, pos_mask = inf, neg_mask = inf
+Training @ epoch = 185, 180/235, loss = 85.90347, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 99.02
+***********sensitivity test set **********
+Accuracy: 98.88
+***********invariance test set **********
+Accuracy: 83.75
+
+Patience= -123, Time=74.00366, train_epoch_loss = 85.96262349879488, test_epoch_acc = 83.75
+                                                                                                    
+Training @ epoch = 186, 0/235, loss = 86.67621, pos_mask = inf, neg_mask = inf
+Training @ epoch = 186, 60/235, loss = 86.03728, pos_mask = inf, neg_mask = inf
+Training @ epoch = 186, 120/235, loss = 86.59607, pos_mask = inf, neg_mask = inf
+Training @ epoch = 186, 180/235, loss = 86.93594, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.98
+***********sensitivity test set **********
+Accuracy: 98.89
+***********invariance test set **********
+Accuracy: 83.26
+
+Patience= -124, Time=74.40249, train_epoch_loss = 85.9609763774466, test_epoch_acc = 83.26
+                                                                                                    
+Training @ epoch = 187, 0/235, loss = 86.70475, pos_mask = inf, neg_mask = inf
+Training @ epoch = 187, 60/235, loss = 85.54518, pos_mask = inf, neg_mask = inf
+Training @ epoch = 187, 120/235, loss = 85.31293, pos_mask = inf, neg_mask = inf
+Training @ epoch = 187, 180/235, loss = 87.46642, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.99
+***********sensitivity test set **********
+Accuracy: 98.88
+***********invariance test set **********
+Accuracy: 83.8
+
+Patience= -125, Time=74.79839, train_epoch_loss = 85.9626045876361, test_epoch_acc = 83.8
+                                                                                                    
+Training @ epoch = 188, 0/235, loss = 86.90852, pos_mask = inf, neg_mask = inf
+Training @ epoch = 188, 60/235, loss = 85.30624, pos_mask = inf, neg_mask = inf
+Training @ epoch = 188, 120/235, loss = 86.49292, pos_mask = inf, neg_mask = inf
+Training @ epoch = 188, 180/235, loss = 86.11544, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.99
+***********sensitivity test set **********
+Accuracy: 98.88
+***********invariance test set **********
+Accuracy: 83.46
+
+Patience= -126, Time=75.19605, train_epoch_loss = 85.96020851946892, test_epoch_acc = 83.46
+                                                                                                    
+Training @ epoch = 189, 0/235, loss = 86.05755, pos_mask = inf, neg_mask = inf
+Training @ epoch = 189, 60/235, loss = 85.81189, pos_mask = inf, neg_mask = inf
+Training @ epoch = 189, 120/235, loss = 85.79780, pos_mask = inf, neg_mask = inf
+Training @ epoch = 189, 180/235, loss = 84.78160, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.99
+***********sensitivity test set **********
+Accuracy: 98.88
+***********invariance test set **********
+Accuracy: 83.77
+
+Patience= -127, Time=75.59247, train_epoch_loss = 85.96054203763921, test_epoch_acc = 83.77
+                                                                                                    
+Training @ epoch = 190, 0/235, loss = 85.97832, pos_mask = inf, neg_mask = inf
+Training @ epoch = 190, 60/235, loss = 86.03122, pos_mask = inf, neg_mask = inf
+Training @ epoch = 190, 120/235, loss = 84.97706, pos_mask = inf, neg_mask = inf
+Training @ epoch = 190, 180/235, loss = 86.24474, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 99.02
+***********sensitivity test set **********
+Accuracy: 98.96
+***********invariance test set **********
+Accuracy: 83.69
+
+Patience= -128, Time=75.98928, train_epoch_loss = 85.96136098009475, test_epoch_acc = 83.69
+                                                                                                    
+Training @ epoch = 191, 0/235, loss = 86.18243, pos_mask = inf, neg_mask = inf
+Training @ epoch = 191, 60/235, loss = 86.22481, pos_mask = inf, neg_mask = inf
+Training @ epoch = 191, 120/235, loss = 83.72845, pos_mask = inf, neg_mask = inf
+Training @ epoch = 191, 180/235, loss = 85.04038, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.99
+***********sensitivity test set **********
+Accuracy: 98.9
+***********invariance test set **********
+Accuracy: 83.7
+
+Patience= -129, Time=76.38728, train_epoch_loss = 85.96278930014752, test_epoch_acc = 83.7
+                                                                                                    
+Training @ epoch = 192, 0/235, loss = 85.88911, pos_mask = inf, neg_mask = inf
+Training @ epoch = 192, 60/235, loss = 86.14412, pos_mask = inf, neg_mask = inf
+Training @ epoch = 192, 120/235, loss = 86.15104, pos_mask = inf, neg_mask = inf
+Training @ epoch = 192, 180/235, loss = 84.69141, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.92
+***********invariance test set **********
+Accuracy: 83.99
+
+Patience= -130, Time=76.78357, train_epoch_loss = 85.96173704431412, test_epoch_acc = 83.99
+                                                                                                    
+Training @ epoch = 193, 0/235, loss = 87.84929, pos_mask = inf, neg_mask = inf
+Training @ epoch = 193, 60/235, loss = 86.83697, pos_mask = inf, neg_mask = inf
+Training @ epoch = 193, 120/235, loss = 85.71079, pos_mask = inf, neg_mask = inf
+Training @ epoch = 193, 180/235, loss = 84.99354, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.98
+***********sensitivity test set **********
+Accuracy: 98.9
+***********invariance test set **********
+Accuracy: 83.55
+
+Patience= -131, Time=77.18011, train_epoch_loss = 85.96271553851189, test_epoch_acc = 83.55
+                                                                                                    
+Training @ epoch = 194, 0/235, loss = 86.78519, pos_mask = inf, neg_mask = inf
+Training @ epoch = 194, 60/235, loss = 85.15125, pos_mask = inf, neg_mask = inf
+Training @ epoch = 194, 120/235, loss = 86.30497, pos_mask = inf, neg_mask = inf
+Training @ epoch = 194, 180/235, loss = 87.37375, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.99
+***********sensitivity test set **********
+Accuracy: 98.88
+***********invariance test set **********
+Accuracy: 83.34
+
+Patience= -132, Time=77.57801, train_epoch_loss = 85.96277245054854, test_epoch_acc = 83.34
+                                                                                                    
+Training @ epoch = 195, 0/235, loss = 86.86582, pos_mask = inf, neg_mask = inf
+Training @ epoch = 195, 60/235, loss = 86.28751, pos_mask = inf, neg_mask = inf
+Training @ epoch = 195, 120/235, loss = 84.86964, pos_mask = inf, neg_mask = inf
+Training @ epoch = 195, 180/235, loss = 85.74678, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.98
+***********sensitivity test set **********
+Accuracy: 98.9
+***********invariance test set **********
+Accuracy: 83.46
+
+Patience= -133, Time=77.97496, train_epoch_loss = 85.96011255142537, test_epoch_acc = 83.46
+                                                                                                    
+Training @ epoch = 196, 0/235, loss = 86.28266, pos_mask = inf, neg_mask = inf
+Training @ epoch = 196, 60/235, loss = 86.15309, pos_mask = inf, neg_mask = inf
+Training @ epoch = 196, 120/235, loss = 86.72976, pos_mask = inf, neg_mask = inf
+Training @ epoch = 196, 180/235, loss = 86.64638, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.97
+***********sensitivity test set **********
+Accuracy: 98.88
+***********invariance test set **********
+Accuracy: 83.86
+
+Patience= -134, Time=78.37392, train_epoch_loss = 85.95980735941136, test_epoch_acc = 83.86
+                                                                                                    
+Training @ epoch = 197, 0/235, loss = 84.31192, pos_mask = inf, neg_mask = inf
+Training @ epoch = 197, 60/235, loss = 85.52601, pos_mask = inf, neg_mask = inf
+Training @ epoch = 197, 120/235, loss = 86.22313, pos_mask = inf, neg_mask = inf
+Training @ epoch = 197, 180/235, loss = 86.42143, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.97
+***********sensitivity test set **********
+Accuracy: 98.91
+***********invariance test set **********
+Accuracy: 83.63
+
+Patience= -135, Time=78.77049, train_epoch_loss = 85.9606443526897, test_epoch_acc = 83.63
+                                                                                                    
+Training @ epoch = 198, 0/235, loss = 84.83537, pos_mask = inf, neg_mask = inf
+Training @ epoch = 198, 60/235, loss = 87.48707, pos_mask = inf, neg_mask = inf
+Training @ epoch = 198, 120/235, loss = 86.42752, pos_mask = inf, neg_mask = inf
+Training @ epoch = 198, 180/235, loss = 86.11011, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.98
+***********sensitivity test set **********
+Accuracy: 98.89
+***********invariance test set **********
+Accuracy: 83.44
+
+Patience= -136, Time=79.16755, train_epoch_loss = 85.95980873919548, test_epoch_acc = 83.44
+                                                                                                    
+Training @ epoch = 199, 0/235, loss = 85.75082, pos_mask = inf, neg_mask = inf
+Training @ epoch = 199, 60/235, loss = 86.48216, pos_mask = inf, neg_mask = inf
+Training @ epoch = 199, 120/235, loss = 88.01839, pos_mask = inf, neg_mask = inf
+Training @ epoch = 199, 180/235, loss = 85.39643, pos_mask = inf, neg_mask = inf
+***********original test set **********
+Accuracy: 98.96
+***********sensitivity test set **********
+Accuracy: 98.9
+***********invariance test set **********
+Accuracy: 84.18
+
+Patience= -137, Time=79.56582, train_epoch_loss = 85.95970299903382, test_epoch_acc = 84.18
+                                                                                                    
+*****Plotting embeddings at iter: 100****
+Finished Training in: 79.58580!!
