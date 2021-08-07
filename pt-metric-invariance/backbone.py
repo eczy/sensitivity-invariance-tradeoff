@@ -6,9 +6,9 @@ from torchvision import models
 
 
 class EmbeddingNet(nn.Module):
-    def __init__(self, embed_dim=4, num_classes=10):
+    def __init__(self, embed_dim=4, channels=1, num_classes=10):
         super(EmbeddingNet, self).__init__()
-        self.convnet = nn.Sequential(nn.Conv2d(1, 32, 5), nn.PReLU(),
+        self.convnet = nn.Sequential(nn.Conv2d(channels, 32, 5), nn.PReLU(),
                                      nn.MaxPool2d(2, stride=2),
                                      nn.Conv2d(32, 64, 5), nn.PReLU(),
                                      nn.MaxPool2d(2, stride=2))
@@ -19,6 +19,31 @@ class EmbeddingNet(nn.Module):
                                 nn.PReLU(),
                                 nn.Linear(256, embed_dim)
                                 )
+
+
+        # self.convnet = nn.Sequential(nn.Conv2d(1, 32, 5), nn.PReLU(),
+        #                              nn.MaxPool2d(2, stride=2),
+        #                              nn.Conv2d(32, 64, 5), nn.PReLU(),
+        #                              nn.MaxPool2d(2, stride=2))
+
+
+        # # self.tmp1 = nn.Sequential(nn.Conv2d(3, 32, 4), nn.PReLU(),
+        # #                              nn.MaxPool2d(2, stride=2),
+        # #                              nn.Conv2d(32, 64, 4), nn.PReLU(),
+        # #                              nn.MaxPool2d(3, stride=2))    
+
+        # # self.tmp2 = nn.Sequential(nn.Conv2d(3, 32, 4), nn.PReLU(),
+        # #                              nn.MaxPool2d(3, stride=3),
+        # #                              nn.Conv2d(32, 64, 4), nn.PReLU(),
+        # #                              nn.MaxPool2d(3, stride=3))                                                                             
+
+        
+        # self.embedding = nn.Sequential(nn.Linear(64 * 4 * 4, 256), # 64 x 4 x 4 for mnist // 64 * 5 * 5 cifar
+        #                         nn.PReLU(),
+        #                         nn.Linear(256, 256),
+        #                         nn.PReLU(),
+        #                         nn.Linear(256, embed_dim)
+        #                         )
         
         # TODO is this okay
         self.test = nn.Linear(embed_dim, num_classes)
@@ -29,12 +54,24 @@ class EmbeddingNet(nn.Module):
 
     def get_embedding(self, x):
         output = self.convnet(x)
+        # output2 = self.tmp1(x)
+        # output3 = self.tmp2(x)
+
+        # print("after conv")
+        # import pdb; pdb.set_trace();
+
         output = output.view(output.size()[0], -1)
-        return self.embedding(output)        
+        tmp = self.embedding(output)   
+
+        # print("after embed")
+        # import pdb; pdb.set_trace();  
+        return tmp
 
     def forward(self, x):
         output = self.get_embedding(x)
 
+        # print("before fc")
+        # import pdb; pdb.set_trace();
         out_logit = self.fc(output)
         out_nologit = self.test(output)
         out_probs = self.probs(output)

@@ -6,23 +6,39 @@ import os
 from sklearn.manifold import TSNE
 
 
+def do_plot(x_train, y_train, model, device, plot_dir, name): 
+    x_train = x_train.to(device)
+
+    # print("plot-"+name)
+    # import pdb; pdb.set_trace()
+    
+    print(name)
+    train_outputs = model.get_embedding(x_train)
+
+    tsne = TSNE(random_state=0)
+    train_tsne_embeds = tsne.fit_transform(train_outputs.cpu().detach().numpy())
+    scatter(train_tsne_embeds, y_train.cpu().numpy(), root=plot_dir, subtitle=f'{name} TNN distribution')
+    
 def tsne_plot(model, device, viz_train_loader, viz_test_loader, mdir, iter_idx):
     print("*****Plotting embeddings at iter: %s****" % iter_idx)
     plot_dir = os.path.join(mdir, 'plots')
 
-    x_test, y_test, _ = next(iter(viz_test_loader))
-    x_train, y_train, _ = next(iter(viz_train_loader))
-    x_train = x_train.to(device)
-    x_test = x_test.to(device)
-    train_outputs = model.get_embedding(x_train)
-    test_outputs = model.get_embedding(x_test)
+    x_train, y_train, x_train_invar = next(iter(viz_train_loader))
+    x_test, y_test, x_test_invar = next(iter(viz_test_loader))
 
-    tsne = TSNE(random_state=0)
-    train_tsne_embeds = tsne.fit_transform(train_outputs.cpu().detach().numpy())
-    test_tsne_embeds = tsne.fit_transform(test_outputs.cpu().detach().numpy())
+    import pdb; pdb.set_trace();
 
-    scatter(train_tsne_embeds, y_train.cpu().numpy(), root=plot_dir, subtitle=f'ITER: %s TRAIN online hard TNN distribution' % iter_idx)
-    scatter(test_tsne_embeds, y_test.cpu().numpy(), root=plot_dir, subtitle=f'ITER: %s TEST online hard TNN distribution' % iter_idx)
+
+    # x_train_invar = x_train_invar.unsqueeze(1)
+    # x_test_invar = x_test_invar.unsqueeze(1)
+
+    do_plot(x_train, y_train, model, device, plot_dir, "Clean Train")
+    do_plot(x_test, y_test, model, device, plot_dir, "Clean Test")
+    do_plot(x_train_invar, y_train, model, device, plot_dir, "Invariance Train")
+    do_plot(x_test_invar, y_test, model, device, plot_dir, "Invariance Test")
+
+
+    
 
 
 def scatter(x, labels, root='plot', subtitle=None, dataset='MNIST'):
@@ -73,6 +89,9 @@ def scatter(x, labels, root='plot', subtitle=None, dataset='MNIST'):
 
     plt.savefig(os.path.join(root, str(subtitle)))
 
+def fetch_n_channels(dataloader): 
+    x_train, _, _ = next(iter(dataloader))
+    return x_train.shape[1]
 
 
 # import matplotlib

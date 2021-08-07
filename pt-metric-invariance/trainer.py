@@ -33,8 +33,10 @@ def train(model, train_loader, config):
         inputs = inputs.to(device)
         labels = labels.to(device)
         invar_inputs = invar_inputs.to(device)
+        optimizer.zero_grad()
         
         loss, pos_mask, neg_mask = modeling.construct_loss(config, model, inputs, invar_inputs, labels, device)
+        # loss, pos_mask, neg_mask = modeling.construct_only_nll_ml_invariance(config, model, inputs, invar_inputs, labels, device)
         loss.backward()
 
         optimizer.step()
@@ -54,7 +56,7 @@ def test(model, test_loader, config):
         all_labels = np.array([])
         all_res = np.array([])
 
-        for __path__, data in enumerate(test_loader):
+        for _, data in enumerate(test_loader): #iterating in batches
             inputs, labels, invar_inputs = data
             inputs = inputs.to(device)
             labels = labels.to(device)
@@ -69,7 +71,7 @@ def test(model, test_loader, config):
                 res = model(sens_images)
 
             elif config_name == "invariance": 
-                invar_inputs = invar_inputs.unsqueeze(1)
+                # invar_inputs = invar_inputs.unsqueeze(1)
                 res = model(invar_inputs)                
             
             # accuracy 
@@ -82,6 +84,11 @@ def test(model, test_loader, config):
         macro_accuracy = round(100 * np.mean(all_res == all_labels), 2)
         print(f"Accuracy: {macro_accuracy}")
         arr_test_accs.append(macro_accuracy)
+
+        #TODO: 
+        # add micro accuracy
+        # rerun this shit
+        # todo add plot for invariance
         
     return model, arr_test_accs
 
@@ -90,7 +97,7 @@ if __name__ == "__main__":
 
     #1. parse input parameters
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str, help="config for model", default="./configs-dev/clean_nll_norm.ini")
+    parser.add_argument('--config', type=str, help="config for model", required=True)
     parser.add_argument('--device', type=str, help="cuda device no.", default=0)
     parser.add_argument('--reset', '-r', action='store_true', help="whether or not to reset model dir.")
     input_args = parser.parse_args()
@@ -112,7 +119,7 @@ if __name__ == "__main__":
     device = torch.device('cuda:{}'.format(input_args.device))
 
     start_time = time.time()
-    start_time_dir = f'{model_name}{start_time:0.0f}'
+    start_time_dir = f'{start_time:0.0f}_{model_name}'
     model_dir = os.path.join(root_dir, 'model_runs', start_time_dir)
     if input_args.reset and os.path.exists(model_dir): 
         shutil.rmtree(model_dir)
@@ -129,10 +136,13 @@ if __name__ == "__main__":
     # online
     
     invar_root = '/data/evan/mnist/mnist'
-    normal_root = '../data/MNIST'
+    normal_root = '../data/mnist'
+    # invar_root = '/data/evan/cifar'
+    # normal_root = '../data/cifar'
+
     train_dataset = ad.AdversarialMNIST(root=normal_root,
                                         adv_root=invar_root,
-                                        train=True, 
+                                        train=False, 
                                         download=True,
                                         transform=transforms.Compose([
                                                     transforms.ToTensor(),
@@ -145,7 +155,22 @@ if __name__ == "__main__":
                                         transform=transforms.Compose([
                                                     transforms.ToTensor(),
                                                     transforms.Normalize((mean,), (std,))]))
-    n_classes = 10
+
+    # train_dataset = ad.AdversarialCIFAR10(root=normal_root,
+    #                                     adv_root=invar_root,
+    #                                     train=True, 
+    #                                     download=True,
+    #                                     transform=transforms.Compose([
+    #                                                 transforms.ToTensor(),
+    #                                                 transforms.Normalize((mean,), (std,))]))
+
+    # test_dataset = ad.AdversarialCIFAR10(root=normal_root,
+    #                                     adv_root=invar_root,
+    #                                     train=False, 
+    #                                     download=True,
+    #                                     transform=transforms.Compose([
+    #                                                 transforms.ToTensor(),
+    #                                                 transforms.Normalize((mean,), (std,))]))    
 
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
@@ -155,7 +180,8 @@ if __name__ == "__main__":
     viz_test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
     #5. set up model 
-    model = backbone.EmbeddingNet()
+    n_channels = utils.fetch_n_channels(dataloader=viz_train_loader)
+    model = backbone.EmbeddingNet(channels=n_channels) #TODO parametrize
     model.to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=lr_rate)
     loss_fn = TripletLoss(margin=margin)
