@@ -181,7 +181,7 @@ if __name__ == "__main__":
 
     #5. set up model 
     n_channels = utils.fetch_n_channels(dataloader=viz_train_loader)
-    model = backbone.EmbeddingNet(channels=n_channels) #TODO parametrize
+    model = backbone.EmbeddingNet(channels=n_channels)
     model.to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=lr_rate)
     loss_fn = TripletLoss(margin=margin)

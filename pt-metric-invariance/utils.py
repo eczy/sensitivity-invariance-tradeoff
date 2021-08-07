@@ -26,9 +26,6 @@ def tsne_plot(model, device, viz_train_loader, viz_test_loader, mdir, iter_idx):
     x_train, y_train, x_train_invar = next(iter(viz_train_loader))
     x_test, y_test, x_test_invar = next(iter(viz_test_loader))
 
-    import pdb; pdb.set_trace();
-
-
     # x_train_invar = x_train_invar.unsqueeze(1)
     # x_test_invar = x_test_invar.unsqueeze(1)
 
