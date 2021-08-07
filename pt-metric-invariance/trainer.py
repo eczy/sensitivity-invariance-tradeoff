@@ -142,7 +142,7 @@ if __name__ == "__main__":
 
     train_dataset = ad.AdversarialMNIST(root=normal_root,
                                         adv_root=invar_root,
-                                        train=False, 
+                                        train=True, 
                                         download=True,
                                         transform=transforms.Compose([
                                                     transforms.ToTensor(),
