@@ -7,10 +7,63 @@ import numpy as np
 import sampler
 import attacks
 
+def construct_only_nll_ml_invariance(config, model, inputs, invar_inputs, labels, device): 
+    # just invariance here
+    loss = 0.0
+    nll_loss = torch.nn.NLLLoss()
+    # invar_inputs = invar_inputs.unsqueeze(1) #torch.Size([256, 1, 28, 28])
+
+    nat_embeddings = model.get_embedding(inputs)
+    adv_embeddings = model.get_embedding(invar_inputs)
+    outputs = model(inputs)
+
+    metric_loss, norms, pos_mask, neg_mask = sampler.online_mine_angular_hard(labels, nat_embeddings, adv_embeddings, margin=0.05, squared=True, device=device)
+
+    #nll
+    xe_loss = nll_loss(outputs, labels)
+
+    a_norm, n_norm, p_norm = norms
+    all_norms = a_norm + n_norm + p_norm
+    
+    #construct loss
+    loss = xe_loss + (0.5*metric_loss) + (0.001 * torch.mean(all_norms))
+
+    return loss, pos_mask, neg_mask
+
+
+
+def construct_nll_ml_sens_invariance(config, model, inputs, invar_inputs, labels, device): 
+    # just sensitivity and invariance here
+    loss = 0.0
+    nll_loss = torch.nn.NLLLoss()
+    invar_inputs = invar_inputs.unsqueeze(1) #torch.Size([256, 1, 28, 28])
+
+    nat_embeddings = model.get_embedding(inputs)
+    sens_image = attacks.fgsm_attack(model=model, images=inputs, labels=labels, device=device, eps=0.01)
+    sens_embeddings = model.get_embedding(sens_image)
+    invar_embeddings = model.get_embedding(invar_inputs)
+    outputs = model(inputs)
+
+    sens_metric_loss, invar_norms, pos_mask, neg_mask = sampler.online_mine_angular_hard(labels, nat_embeddings, sens_embeddings, margin=0.05, squared=True, device=device)
+    invar_metric_loss, sens_norms, pos_mask, neg_mask = sampler.online_mine_angular_hard(labels, nat_embeddings, invar_embeddings, margin=0.05, squared=True, device=device)
+
+    #nll
+    xe_loss = nll_loss(outputs, labels)
+
+    #norms
+
+    all_invar_norms = invar_norms[0] + invar_norms[1] + invar_norms[2]
+    all_sens_norms = sens_norms[0] + sens_norms[1] + sens_norms[2]
+    
+    #construct loss
+    loss = xe_loss + (0.5*sens_metric_loss) + (0.5*invar_metric_loss) + (0.001 * torch.mean(all_invar_norms)) (0.001 * torch.mean(all_sens_norms))
+
+    return loss, pos_mask, neg_mask
+
 
 def construct_loss(config, model, inputs, invar_inputs, labels, device): 
     loss = 0.0
-    invar_inputs = invar_inputs.unsqueeze(1) #torch.Size([256, 1, 28, 28])
+    # invar_inputs = invar_inputs.unsqueeze(1) #torch.Size([256, 1, 28, 28])
 
     nat_embeddings = model.get_embedding(inputs)
     adv_embeddings = None
