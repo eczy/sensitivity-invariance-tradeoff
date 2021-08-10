@@ -154,8 +154,9 @@ if __name__ == "__main__":
     viz_train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=False)
     viz_test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
-    #5. set up model 
-    model = backbone.EmbeddingNet()
+    #5. set up model
+    n_channels = train_dataset[0][0].size()[0]
+    model = backbone.EmbeddingNet(channels_in=n_channels)
     model.to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=lr_rate)
     loss_fn = TripletLoss(margin=margin)
